@@ -1,0 +1,863 @@
+q_num,answer,sec_num,sec_name
+1,NewBuilding,01 31 06,Coordination Drawings
+1,NewBuilding,01 45 33,Code Required Special Inspections and Procedures
+1,NewBuilding,05 50 00,Metal Fabrications
+1,NewBuilding,06 16 00,Sheathing     
+1,NewBuilding,06 40 23,Interior Architectural Woodwork
+1,NewBuilding,06 41 13,Wood-Veneer-Faced Architectural Cabinets
+1,NewBuilding,06 41 16,Plastic-Laminate-Faced Architectural Cabinets
+1,NewBuilding,07 13 26,Self-Adhering Sheet Waterproofing
+1,NewBuilding,07 13 53,Elastomeric Sheet Waterproofing    
+1,NewBuilding,07 13 54,Thermoplastic Sheet Waterproofing    
+1,NewBuilding,07 14 13,Hot Fluid-Applied Rubberized Asphalt Waterproofing
+1,NewBuilding,07 14 16,Cold Fluid-Applied Waterproofing
+1,NewBuilding,07 16 13,Polymer Modified Cement Waterproofing
+1,NewBuilding,07 21 00,Thermal Insulation
+1,NewBuilding,07 27 15,Nonbituminous Self-Adhering Sheet Air Barriers  
+1,NewBuilding,07 27 26,Fluid-Applied Membrane Air Barriers
+1,NewBuilding,07 54 23,Thermoplastic Polyolefin (TPO) Roofing
+1,NewBuilding,07 62 00,Sheet Metal Flashing and Trim
+1,NewBuilding,07 62 10,Flexible Flashings
+1,NewBuilding,07 71 00,Roof Specialties
+1,NewBuilding,07 81 00,Applied Fire Protection
+1,NewBuilding,08 41 13,Aluminum-Framed Entrances and Storefront
+1,NewBuilding,08 41 26,All-Glass Entrances and Storefront
+1,NewBuilding,08 43 13,Aluminum-Framed Storefronts
+1,NewBuilding,08 44 13,Glazed Aluminum Curtainwall
+1,NewBuilding,08 91 19,Fixed Louvers
+1,NewBuilding,09 21 16,Gypsum Board Shaft Wall Assemblies
+1,NewBuilding,09 30 13,Tiling
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 44 00,Fire Protection Specialties
+1,NewBuilding,12 36 23,Plastic-Laminate-Clad Countertops
+1,NewBuilding,12 36 61,Simulated Stone Countertops
+1,NewBuilding,12 48 13,Entrance Floor Mats and Frames
+1,NewBuilding,12 48 16,Entrance Floor Grilles
+1,NewBuilding,12 93 13,Bicycle Racks
+1,NewBuilding,14 21 23,Electric Traction MRL Elevators
+1,NewBuilding,00 00 01,Cover Page
+1,NewBuilding,00 01 10,Table of Contents
+1,NewBuilding,01 13 00,Delegated Design Requirements
+1,NewBuilding,01 25 00,Substitution Procedures
+1,NewBuilding,01 26 00,Contract Modification Procedures
+1,NewBuilding,01 29 00,Payment Procedures
+1,NewBuilding,01 31 00,Project Management and Coordination
+1,NewBuilding,01 32 00,Construction Progress Documentation
+1,NewBuilding,01 33 00,Submittal Procedures
+1,NewBuilding,01 40 00,Quality Requirements
+1,NewBuilding,01 50 00,Temporary Facilities and Controls
+1,NewBuilding,01 60 00,Product Requirements
+1,NewBuilding,01 73 00,Execution
+1,NewBuilding,01 74 19,Construction Waste Management and Disposal
+1,NewBuilding,01 77 00,Closeout Procedures
+1,NewBuilding,01 78 23,Operation and Maintenance Data
+1,NewBuilding,01 78 39,Project Record Documents
+1,NewBuilding,01 79 00,Demonstration and Training
+1,NewBuilding,06 10 53,Miscellaneous Rough Carpentry
+1,NewBuilding,07 84 13,Penetration Firestopping
+1,NewBuilding,07 84 43,Joint Firestopping
+1,NewBuilding,07 92 00,Joint Sealants
+1,NewBuilding,08 11 13,Hollow Metal Doors and Frames
+1,NewBuilding,08 71 00,Door Hardware
+1,NewBuilding,08 80 00,Glazing
+1,NewBuilding,09 22 16,Non-Structural Metal Framing
+1,NewBuilding,09 29 00,Gypsum Board
+1,NewBuilding,09 51 13,Acoustical Panel Ceilings
+1,NewBuilding,09 91 00,Painting
+1,Addition_Renovation,01 31 06,Coordination Drawings
+1,Addition_Renovation,01 45 33,Code Required Special Inspections and Procedures
+1,Addition_Renovation,01 57 20,Temporary Noise and Dust Mitigation
+1,Addition_Renovation,01 73 29,Cutting and Patching
+1,Addition_Renovation,02 41 19,Selective Demolition
+1,Addition_Renovation,05 50 00,Metal Fabrications
+1,Addition_Renovation,06 16 00,Sheathing     
+1,Addition_Renovation,06 40 23,Interior Architectural Woodwork
+1,Addition_Renovation,06 41 13,Wood-Veneer-Faced Architectural Cabinets
+1,Addition_Renovation,06 41 16,Plastic-Laminate-Faced Architectural Cabinets
+1,Addition_Renovation,07 13 26,Self-Adhering Sheet Waterproofing
+1,Addition_Renovation,07 13 53,Elastomeric Sheet Waterproofing    
+1,Addition_Renovation,07 13 54,Thermoplastic Sheet Waterproofing    
+1,Addition_Renovation,07 14 13,Hot Fluid-Applied Rubberized Asphalt Waterproofing
+1,Addition_Renovation,07 14 16,Cold Fluid-Applied Waterproofing
+1,Addition_Renovation,07 16 13,Polymer Modified Cement Waterproofing
+1,Addition_Renovation,07 21 00,Thermal Insulation
+1,Addition_Renovation,07 27 15,Nonbituminous Self-Adhering Sheet Air Barriers  
+1,Addition_Renovation,07 27 26,Fluid-Applied Membrane Air Barriers
+1,Addition_Renovation,07 54 23,Thermoplastic Polyolefin (TPO) Roofing
+1,Addition_Renovation,07 62 00,Sheet Metal Flashing and Trim
+1,Addition_Renovation,07 62 10,Flexible Flashings
+1,Addition_Renovation,08 41 13,Aluminum-Framed Entrances and Storefront
+1,Addition_Renovation,08 41 26,All-Glass Entrances and Storefront
+1,Addition_Renovation,08 43 13,Aluminum-Framed Storefronts
+1,Addition_Renovation,08 44 13,Glazed Aluminum Curtainwall
+1,Addition_Renovation,10 44 00,Fire Protection Specialties
+1,Addition_Renovation,12 36 23,Plastic-Laminate-Clad Countertops
+1,Addition_Renovation,12 36 61,Simulated Stone Countertops
+1,Addition_Renovation,00 00 01,Cover Page
+1,Addition_Renovation,00 01 10,Table of Contents
+1,Addition_Renovation,01 13 00,Delegated Design Requirements
+1,Addition_Renovation,01 25 00,Substitution Procedures
+1,Addition_Renovation,01 26 00,Contract Modification Procedures
+1,Addition_Renovation,01 29 00,Payment Procedures
+1,Addition_Renovation,01 31 00,Project Management and Coordination
+1,Addition_Renovation,01 32 00,Construction Progress Documentation
+1,Addition_Renovation,01 33 00,Submittal Procedures
+1,Addition_Renovation,01 40 00,Quality Requirements
+1,Addition_Renovation,01 50 00,Temporary Facilities and Controls
+1,Addition_Renovation,01 60 00,Product Requirements
+1,Addition_Renovation,01 73 00,Execution
+1,Addition_Renovation,01 74 19,Construction Waste Management and Disposal
+1,Addition_Renovation,01 77 00,Closeout Procedures
+1,Addition_Renovation,01 78 23,Operation and Maintenance Data
+1,Addition_Renovation,01 78 39,Project Record Documents
+1,Addition_Renovation,01 79 00,Demonstration and Training
+1,Addition_Renovation,06 10 53,Miscellaneous Rough Carpentry
+1,Addition_Renovation,07 84 13,Penetration Firestopping
+1,Addition_Renovation,07 84 43,Joint Firestopping
+1,Addition_Renovation,07 92 00,Joint Sealants
+1,Addition_Renovation,08 11 13,Hollow Metal Doors and Frames
+1,Addition_Renovation,08 71 00,Door Hardware
+1,Addition_Renovation,08 80 00,Glazing
+1,Addition_Renovation,09 22 16,Non-Structural Metal Framing
+1,Addition_Renovation,09 29 00,Gypsum Board
+1,Addition_Renovation,09 51 13,Acoustical Panel Ceilings
+1,Addition_Renovation,09 91 00,Painting
+1,Renovation,01 57 20,Temporary Noise and Dust Mitigation
+1,Renovation,01 73 29,Cutting and Patching
+1,Renovation,02 41 19,Selective Demolition
+1,Renovation,00 00 01,Cover Page
+1,Renovation,00 01 10,Table of Contents
+1,Renovation,01 13 00,Delegated Design Requirements
+1,Renovation,01 25 00,Substitution Procedures
+1,Renovation,01 26 00,Contract Modification Procedures
+1,Renovation,01 29 00,Payment Procedures
+1,Renovation,01 31 00,Project Management and Coordination
+1,Renovation,01 32 00,Construction Progress Documentation
+1,Renovation,01 33 00,Submittal Procedures
+1,Renovation,01 40 00,Quality Requirements
+1,Renovation,01 50 00,Temporary Facilities and Controls
+1,Renovation,01 60 00,Product Requirements
+1,Renovation,01 73 00,Execution
+1,Renovation,01 74 19,Construction Waste Management and Disposal
+1,Renovation,01 77 00,Closeout Procedures
+1,Renovation,01 78 23,Operation and Maintenance Data
+1,Renovation,01 78 39,Project Record Documents
+1,Renovation,01 79 00,Demonstration and Training
+1,Renovation,06 10 53,Miscellaneous Rough Carpentry
+1,Renovation,07 84 13,Penetration Firestopping
+1,Renovation,07 84 43,Joint Firestopping
+1,Renovation,07 92 00,Joint Sealants
+1,Renovation,08 11 13,Hollow Metal Doors and Frames
+1,Renovation,08 71 00,Door Hardware
+1,Renovation,08 80 00,Glazing
+1,Renovation,09 22 16,Non-Structural Metal Framing
+1,Renovation,09 29 00,Gypsum Board
+1,Renovation,09 51 13,Acoustical Panel Ceilings
+1,Renovation,09 91 00,Painting
+2,Renovation,00 00 01,Cover Page
+2,Renovation,00 01 10,Table of Contents
+2,Renovation,01 13 00,Delegated Design Requirements
+2,Renovation,01 25 00,Substitution Procedures
+2,Renovation,01 26 00,Contract Modification Procedures
+2,Renovation,01 29 00,Payment Procedures
+2,Renovation,01 31 00,Project Management and Coordination
+2,Renovation,01 32 00,Construction Progress Documentation
+2,Renovation,01 33 00,Submittal Procedures
+2,Renovation,01 40 00,Quality Requirements
+2,Renovation,01 50 00,Temporary Facilities and Controls
+2,Renovation,01 60 00,Product Requirements
+2,Renovation,01 73 00,Execution
+2,Renovation,01 74 19,Construction Waste Management and Disposal
+2,Renovation,01 77 00,Closeout Procedures
+2,Renovation,01 78 23,Operation and Maintenance Data
+2,Renovation,01 78 39,Project Record Documents
+2,Renovation,01 79 00,Demonstration and Training
+2,Renovation,06 10 53,Miscellaneous Rough Carpentry
+2,Renovation,07 84 13,Penetration Firestopping
+2,Renovation,07 84 43,Joint Firestopping
+2,Renovation,07 92 00,Joint Sealants
+2,Renovation,08 11 13,Hollow Metal Doors and Frames
+2,Renovation,08 71 00,Door Hardware
+2,Renovation,08 80 00,Glazing
+2,Renovation,09 22 16,Non-Structural Metal Framing
+2,Renovation,09 29 00,Gypsum Board
+2,Renovation,09 51 13,Acoustical Panel Ceilings
+2,Renovation,09 91 00,Painting
+3,Yes,01 57 20,Temporary Noise and Dust Mitigation
+3,Yes,01 73 29,Cutting and Patching
+3,Yes,02 41 16,Structure Demolition
+3,Yes,02 41 19,Selective Demolition
+3,Yes,00 00 01,Cover Page
+3,Yes,00 01 10,Table of Contents
+3,Yes,01 13 00,Delegated Design Requirements
+3,Yes,01 25 00,Substitution Procedures
+3,Yes,01 26 00,Contract Modification Procedures
+3,Yes,01 29 00,Payment Procedures
+3,Yes,01 31 00,Project Management and Coordination
+3,Yes,01 32 00,Construction Progress Documentation
+3,Yes,01 33 00,Submittal Procedures
+3,Yes,01 40 00,Quality Requirements
+3,Yes,01 50 00,Temporary Facilities and Controls
+3,Yes,01 60 00,Product Requirements
+3,Yes,01 73 00,Execution
+3,Yes,01 74 19,Construction Waste Management and Disposal
+3,Yes,01 77 00,Closeout Procedures
+3,Yes,01 78 23,Operation and Maintenance Data
+3,Yes,01 78 39,Project Record Documents
+3,Yes,01 79 00,Demonstration and Training
+3,Yes,06 10 53,Miscellaneous Rough Carpentry
+3,Yes,07 84 13,Penetration Firestopping
+3,Yes,07 84 43,Joint Firestopping
+3,Yes,07 92 00,Joint Sealants
+3,Yes,08 11 13,Hollow Metal Doors and Frames
+3,Yes,08 71 00,Door Hardware
+3,Yes,08 80 00,Glazing
+3,Yes,09 22 16,Non-Structural Metal Framing
+3,Yes,09 29 00,Gypsum Board
+3,Yes,09 51 13,Acoustical Panel Ceilings
+3,Yes,09 91 00,Painting
+4,Yes_NewBuilding_Addition_Addition/Renovation,09 21 16,Gypsum Board Shaft Wall Assemblies
+4,Yes_NewBuilding_Addition_Addition/Renovation,00 00 01,Cover Page
+4,Yes_NewBuilding_Addition_Addition/Renovation,00 01 10,Table of Contents
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 13 00,Delegated Design Requirements
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 25 00,Substitution Procedures
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 26 00,Contract Modification Procedures
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 29 00,Payment Procedures
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 31 00,Project Management and Coordination
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 32 00,Construction Progress Documentation
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 33 00,Submittal Procedures
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 40 00,Quality Requirements
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 50 00,Temporary Facilities and Controls
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 60 00,Product Requirements
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 73 00,Execution
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 74 19,Construction Waste Management and Disposal
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 77 00,Closeout Procedures
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 78 23,Operation and Maintenance Data
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 78 39,Project Record Documents
+4,Yes_NewBuilding_Addition_Addition/Renovation,01 79 00,Demonstration and Training
+4,Yes_NewBuilding_Addition_Addition/Renovation,06 10 53,Miscellaneous Rough Carpentry
+4,Yes_NewBuilding_Addition_Addition/Renovation,07 84 13,Penetration Firestopping
+4,Yes_NewBuilding_Addition_Addition/Renovation,07 84 43,Joint Firestopping
+4,Yes_NewBuilding_Addition_Addition/Renovation,07 92 00,Joint Sealants
+4,Yes_NewBuilding_Addition_Addition/Renovation,08 11 13,Hollow Metal Doors and Frames
+4,Yes_NewBuilding_Addition_Addition/Renovation,08 71 00,Door Hardware
+4,Yes_NewBuilding_Addition_Addition/Renovation,08 80 00,Glazing
+4,Yes_NewBuilding_Addition_Addition/Renovation,09 22 16,Non-Structural Metal Framing
+4,Yes_NewBuilding_Addition_Addition/Renovation,09 29 00,Gypsum Board
+4,Yes_NewBuilding_Addition_Addition/Renovation,09 51 13,Acoustical Panel Ceilings
+4,Yes_NewBuilding_Addition_Addition/Renovation,09 91 00,Painting
+4,Yes_Renovation,00 00 01,Cover Page
+4,Yes_Renovation,00 01 10,Table of Contents
+4,Yes_Renovation,01 13 00,Delegated Design Requirements
+4,Yes_Renovation,01 25 00,Substitution Procedures
+4,Yes_Renovation,01 26 00,Contract Modification Procedures
+4,Yes_Renovation,01 29 00,Payment Procedures
+4,Yes_Renovation,01 31 00,Project Management and Coordination
+4,Yes_Renovation,01 32 00,Construction Progress Documentation
+4,Yes_Renovation,01 33 00,Submittal Procedures
+4,Yes_Renovation,01 40 00,Quality Requirements
+4,Yes_Renovation,01 50 00,Temporary Facilities and Controls
+4,Yes_Renovation,01 60 00,Product Requirements
+4,Yes_Renovation,01 73 00,Execution
+4,Yes_Renovation,01 74 19,Construction Waste Management and Disposal
+4,Yes_Renovation,01 77 00,Closeout Procedures
+4,Yes_Renovation,01 78 23,Operation and Maintenance Data
+4,Yes_Renovation,01 78 39,Project Record Documents
+4,Yes_Renovation,01 79 00,Demonstration and Training
+4,Yes_Renovation,06 10 53,Miscellaneous Rough Carpentry
+4,Yes_Renovation,07 84 13,Penetration Firestopping
+4,Yes_Renovation,07 84 43,Joint Firestopping
+4,Yes_Renovation,07 92 00,Joint Sealants
+4,Yes_Renovation,08 11 13,Hollow Metal Doors and Frames
+4,Yes_Renovation,08 71 00,Door Hardware
+4,Yes_Renovation,08 80 00,Glazing
+4,Yes_Renovation,09 22 16,Non-Structural Metal Framing
+4,Yes_Renovation,09 29 00,Gypsum Board
+4,Yes_Renovation,09 51 13,Acoustical Panel Ceilings
+4,Yes_Renovation,09 91 00,Painting
+5,Masonry,00 00 01,Cover Page
+5,Masonry,00 01 10,Table of Contents
+5,Masonry,01 13 00,Delegated Design Requirements
+5,Masonry,01 25 00,Substitution Procedures
+5,Masonry,01 26 00,Contract Modification Procedures
+5,Masonry,01 29 00,Payment Procedures
+5,Masonry,01 31 00,Project Management and Coordination
+5,Masonry,01 32 00,Construction Progress Documentation
+5,Masonry,01 33 00,Submittal Procedures
+5,Masonry,01 40 00,Quality Requirements
+5,Masonry,01 50 00,Temporary Facilities and Controls
+5,Masonry,01 60 00,Product Requirements
+5,Masonry,01 73 00,Execution
+5,Masonry,01 74 19,Construction Waste Management and Disposal
+5,Masonry,01 77 00,Closeout Procedures
+5,Masonry,01 78 23,Operation and Maintenance Data
+5,Masonry,01 78 39,Project Record Documents
+5,Masonry,01 79 00,Demonstration and Training
+5,Masonry,06 10 53,Miscellaneous Rough Carpentry
+5,Masonry,07 84 13,Penetration Firestopping
+5,Masonry,07 84 43,Joint Firestopping
+5,Masonry,07 92 00,Joint Sealants
+5,Masonry,08 11 13,Hollow Metal Doors and Frames
+5,Masonry,08 71 00,Door Hardware
+5,Masonry,08 80 00,Glazing
+5,Masonry,09 22 16,Non-Structural Metal Framing
+5,Masonry,09 29 00,Gypsum Board
+5,Masonry,09 51 13,Acoustical Panel Ceilings
+5,Masonry,09 91 00,Painting
+5,Stone,00 00 01,Cover Page
+5,Stone,00 01 10,Table of Contents
+5,Stone,01 13 00,Delegated Design Requirements
+5,Stone,01 25 00,Substitution Procedures
+5,Stone,01 26 00,Contract Modification Procedures
+5,Stone,01 29 00,Payment Procedures
+5,Stone,01 31 00,Project Management and Coordination
+5,Stone,01 32 00,Construction Progress Documentation
+5,Stone,01 33 00,Submittal Procedures
+5,Stone,01 40 00,Quality Requirements
+5,Stone,01 50 00,Temporary Facilities and Controls
+5,Stone,01 60 00,Product Requirements
+5,Stone,01 73 00,Execution
+5,Stone,01 74 19,Construction Waste Management and Disposal
+5,Stone,01 77 00,Closeout Procedures
+5,Stone,01 78 23,Operation and Maintenance Data
+5,Stone,01 78 39,Project Record Documents
+5,Stone,01 79 00,Demonstration and Training
+5,Stone,06 10 53,Miscellaneous Rough Carpentry
+5,Stone,07 84 13,Penetration Firestopping
+5,Stone,07 84 43,Joint Firestopping
+5,Stone,07 92 00,Joint Sealants
+5,Stone,08 11 13,Hollow Metal Doors and Frames
+5,Stone,08 71 00,Door Hardware
+5,Stone,08 80 00,Glazing
+5,Stone,09 22 16,Non-Structural Metal Framing
+5,Stone,09 29 00,Gypsum Board
+5,Stone,09 51 13,Acoustical Panel Ceilings
+5,Stone,09 91 00,Painting
+5,MetalPanel,00 00 01,Cover Page
+5,MetalPanel,00 01 10,Table of Contents
+5,MetalPanel,01 13 00,Delegated Design Requirements
+5,MetalPanel,01 25 00,Substitution Procedures
+5,MetalPanel,01 26 00,Contract Modification Procedures
+5,MetalPanel,01 29 00,Payment Procedures
+5,MetalPanel,01 31 00,Project Management and Coordination
+5,MetalPanel,01 32 00,Construction Progress Documentation
+5,MetalPanel,01 33 00,Submittal Procedures
+5,MetalPanel,01 40 00,Quality Requirements
+5,MetalPanel,01 50 00,Temporary Facilities and Controls
+5,MetalPanel,01 60 00,Product Requirements
+5,MetalPanel,01 73 00,Execution
+5,MetalPanel,01 74 19,Construction Waste Management and Disposal
+5,MetalPanel,01 77 00,Closeout Procedures
+5,MetalPanel,01 78 23,Operation and Maintenance Data
+5,MetalPanel,01 78 39,Project Record Documents
+5,MetalPanel,01 79 00,Demonstration and Training
+5,MetalPanel,06 10 53,Miscellaneous Rough Carpentry
+5,MetalPanel,07 84 13,Penetration Firestopping
+5,MetalPanel,07 84 43,Joint Firestopping
+5,MetalPanel,07 92 00,Joint Sealants
+5,MetalPanel,08 11 13,Hollow Metal Doors and Frames
+5,MetalPanel,08 71 00,Door Hardware
+5,MetalPanel,08 80 00,Glazing
+5,MetalPanel,09 22 16,Non-Structural Metal Framing
+5,MetalPanel,09 29 00,Gypsum Board
+5,MetalPanel,09 51 13,Acoustical Panel Ceilings
+5,MetalPanel,09 91 00,Painting
+5,FiberCementPanel,00 00 01,Cover Page
+5,FiberCementPanel,00 01 10,Table of Contents
+5,FiberCementPanel,01 13 00,Delegated Design Requirements
+5,FiberCementPanel,01 25 00,Substitution Procedures
+5,FiberCementPanel,01 26 00,Contract Modification Procedures
+5,FiberCementPanel,01 29 00,Payment Procedures
+5,FiberCementPanel,01 31 00,Project Management and Coordination
+5,FiberCementPanel,01 32 00,Construction Progress Documentation
+5,FiberCementPanel,01 33 00,Submittal Procedures
+5,FiberCementPanel,01 40 00,Quality Requirements
+5,FiberCementPanel,01 50 00,Temporary Facilities and Controls
+5,FiberCementPanel,01 60 00,Product Requirements
+5,FiberCementPanel,01 73 00,Execution
+5,FiberCementPanel,01 74 19,Construction Waste Management and Disposal
+5,FiberCementPanel,01 77 00,Closeout Procedures
+5,FiberCementPanel,01 78 23,Operation and Maintenance Data
+5,FiberCementPanel,01 78 39,Project Record Documents
+5,FiberCementPanel,01 79 00,Demonstration and Training
+5,FiberCementPanel,06 10 53,Miscellaneous Rough Carpentry
+5,FiberCementPanel,07 84 13,Penetration Firestopping
+5,FiberCementPanel,07 84 43,Joint Firestopping
+5,FiberCementPanel,07 92 00,Joint Sealants
+5,FiberCementPanel,08 11 13,Hollow Metal Doors and Frames
+5,FiberCementPanel,08 71 00,Door Hardware
+5,FiberCementPanel,08 80 00,Glazing
+5,FiberCementPanel,09 22 16,Non-Structural Metal Framing
+5,FiberCementPanel,09 29 00,Gypsum Board
+5,FiberCementPanel,09 51 13,Acoustical Panel Ceilings
+5,FiberCementPanel,09 91 00,Painting
+5,TerraCotta,00 00 01,Cover Page
+5,TerraCotta,00 01 10,Table of Contents
+5,TerraCotta,01 13 00,Delegated Design Requirements
+5,TerraCotta,01 25 00,Substitution Procedures
+5,TerraCotta,01 26 00,Contract Modification Procedures
+5,TerraCotta,01 29 00,Payment Procedures
+5,TerraCotta,01 31 00,Project Management and Coordination
+5,TerraCotta,01 32 00,Construction Progress Documentation
+5,TerraCotta,01 33 00,Submittal Procedures
+5,TerraCotta,01 40 00,Quality Requirements
+5,TerraCotta,01 50 00,Temporary Facilities and Controls
+5,TerraCotta,01 60 00,Product Requirements
+5,TerraCotta,01 73 00,Execution
+5,TerraCotta,01 74 19,Construction Waste Management and Disposal
+5,TerraCotta,01 77 00,Closeout Procedures
+5,TerraCotta,01 78 23,Operation and Maintenance Data
+5,TerraCotta,01 78 39,Project Record Documents
+5,TerraCotta,01 79 00,Demonstration and Training
+5,TerraCotta,06 10 53,Miscellaneous Rough Carpentry
+5,TerraCotta,07 84 13,Penetration Firestopping
+5,TerraCotta,07 84 43,Joint Firestopping
+5,TerraCotta,07 92 00,Joint Sealants
+5,TerraCotta,08 11 13,Hollow Metal Doors and Frames
+5,TerraCotta,08 71 00,Door Hardware
+5,TerraCotta,08 80 00,Glazing
+5,TerraCotta,09 22 16,Non-Structural Metal Framing
+5,TerraCotta,09 29 00,Gypsum Board
+5,TerraCotta,09 51 13,Acoustical Panel Ceilings
+5,TerraCotta,09 91 00,Painting
+5,PhenolicPanel,00 00 01,Cover Page
+5,PhenolicPanel,00 01 10,Table of Contents
+5,PhenolicPanel,01 13 00,Delegated Design Requirements
+5,PhenolicPanel,01 25 00,Substitution Procedures
+5,PhenolicPanel,01 26 00,Contract Modification Procedures
+5,PhenolicPanel,01 29 00,Payment Procedures
+5,PhenolicPanel,01 31 00,Project Management and Coordination
+5,PhenolicPanel,01 32 00,Construction Progress Documentation
+5,PhenolicPanel,01 33 00,Submittal Procedures
+5,PhenolicPanel,01 40 00,Quality Requirements
+5,PhenolicPanel,01 50 00,Temporary Facilities and Controls
+5,PhenolicPanel,01 60 00,Product Requirements
+5,PhenolicPanel,01 73 00,Execution
+5,PhenolicPanel,01 74 19,Construction Waste Management and Disposal
+5,PhenolicPanel,01 77 00,Closeout Procedures
+5,PhenolicPanel,01 78 23,Operation and Maintenance Data
+5,PhenolicPanel,01 78 39,Project Record Documents
+5,PhenolicPanel,01 79 00,Demonstration and Training
+5,PhenolicPanel,06 10 53,Miscellaneous Rough Carpentry
+5,PhenolicPanel,07 84 13,Penetration Firestopping
+5,PhenolicPanel,07 84 43,Joint Firestopping
+5,PhenolicPanel,07 92 00,Joint Sealants
+5,PhenolicPanel,08 11 13,Hollow Metal Doors and Frames
+5,PhenolicPanel,08 71 00,Door Hardware
+5,PhenolicPanel,08 80 00,Glazing
+5,PhenolicPanel,09 22 16,Non-Structural Metal Framing
+5,PhenolicPanel,09 29 00,Gypsum Board
+5,PhenolicPanel,09 51 13,Acoustical Panel Ceilings
+5,PhenolicPanel,09 91 00,Painting
+5,EIFS,00 00 01,Cover Page
+5,EIFS,00 01 10,Table of Contents
+5,EIFS,01 13 00,Delegated Design Requirements
+5,EIFS,01 25 00,Substitution Procedures
+5,EIFS,01 26 00,Contract Modification Procedures
+5,EIFS,01 29 00,Payment Procedures
+5,EIFS,01 31 00,Project Management and Coordination
+5,EIFS,01 32 00,Construction Progress Documentation
+5,EIFS,01 33 00,Submittal Procedures
+5,EIFS,01 40 00,Quality Requirements
+5,EIFS,01 50 00,Temporary Facilities and Controls
+5,EIFS,01 60 00,Product Requirements
+5,EIFS,01 73 00,Execution
+5,EIFS,01 74 19,Construction Waste Management and Disposal
+5,EIFS,01 77 00,Closeout Procedures
+5,EIFS,01 78 23,Operation and Maintenance Data
+5,EIFS,01 78 39,Project Record Documents
+5,EIFS,01 79 00,Demonstration and Training
+5,EIFS,06 10 53,Miscellaneous Rough Carpentry
+5,EIFS,07 84 13,Penetration Firestopping
+5,EIFS,07 84 43,Joint Firestopping
+5,EIFS,07 92 00,Joint Sealants
+5,EIFS,08 11 13,Hollow Metal Doors and Frames
+5,EIFS,08 71 00,Door Hardware
+5,EIFS,08 80 00,Glazing
+5,EIFS,09 22 16,Non-Structural Metal Framing
+5,EIFS,09 29 00,Gypsum Board
+5,EIFS,09 51 13,Acoustical Panel Ceilings
+5,EIFS,09 91 00,Painting
+5,PrecastConcrete,00 00 01,Cover Page
+5,PrecastConcrete,00 01 10,Table of Contents
+5,PrecastConcrete,01 13 00,Delegated Design Requirements
+5,PrecastConcrete,01 25 00,Substitution Procedures
+5,PrecastConcrete,01 26 00,Contract Modification Procedures
+5,PrecastConcrete,01 29 00,Payment Procedures
+5,PrecastConcrete,01 31 00,Project Management and Coordination
+5,PrecastConcrete,01 32 00,Construction Progress Documentation
+5,PrecastConcrete,01 33 00,Submittal Procedures
+5,PrecastConcrete,01 40 00,Quality Requirements
+5,PrecastConcrete,01 50 00,Temporary Facilities and Controls
+5,PrecastConcrete,01 60 00,Product Requirements
+5,PrecastConcrete,01 73 00,Execution
+5,PrecastConcrete,01 74 19,Construction Waste Management and Disposal
+5,PrecastConcrete,01 77 00,Closeout Procedures
+5,PrecastConcrete,01 78 23,Operation and Maintenance Data
+5,PrecastConcrete,01 78 39,Project Record Documents
+5,PrecastConcrete,01 79 00,Demonstration and Training
+5,PrecastConcrete,06 10 53,Miscellaneous Rough Carpentry
+5,PrecastConcrete,07 84 13,Penetration Firestopping
+5,PrecastConcrete,07 84 43,Joint Firestopping
+5,PrecastConcrete,07 92 00,Joint Sealants
+5,PrecastConcrete,08 11 13,Hollow Metal Doors and Frames
+5,PrecastConcrete,08 71 00,Door Hardware
+5,PrecastConcrete,08 80 00,Glazing
+5,PrecastConcrete,09 22 16,Non-Structural Metal Framing
+5,PrecastConcrete,09 29 00,Gypsum Board
+5,PrecastConcrete,09 51 13,Acoustical Panel Ceilings
+5,PrecastConcrete,09 91 00,Painting
+5,CastStone,00 00 01,Cover Page
+5,CastStone,00 01 10,Table of Contents
+5,CastStone,01 13 00,Delegated Design Requirements
+5,CastStone,01 25 00,Substitution Procedures
+5,CastStone,01 26 00,Contract Modification Procedures
+5,CastStone,01 29 00,Payment Procedures
+5,CastStone,01 31 00,Project Management and Coordination
+5,CastStone,01 32 00,Construction Progress Documentation
+5,CastStone,01 33 00,Submittal Procedures
+5,CastStone,01 40 00,Quality Requirements
+5,CastStone,01 50 00,Temporary Facilities and Controls
+5,CastStone,01 60 00,Product Requirements
+5,CastStone,01 73 00,Execution
+5,CastStone,01 74 19,Construction Waste Management and Disposal
+5,CastStone,01 77 00,Closeout Procedures
+5,CastStone,01 78 23,Operation and Maintenance Data
+5,CastStone,01 78 39,Project Record Documents
+5,CastStone,01 79 00,Demonstration and Training
+5,CastStone,06 10 53,Miscellaneous Rough Carpentry
+5,CastStone,07 84 13,Penetration Firestopping
+5,CastStone,07 84 43,Joint Firestopping
+5,CastStone,07 92 00,Joint Sealants
+5,CastStone,08 11 13,Hollow Metal Doors and Frames
+5,CastStone,08 71 00,Door Hardware
+5,CastStone,08 80 00,Glazing
+5,CastStone,09 22 16,Non-Structural Metal Framing
+5,CastStone,09 29 00,Gypsum Board
+5,CastStone,09 51 13,Acoustical Panel Ceilings
+5,CastStone,09 91 00,Painting
+5,ArchitecturalConcrete,00 00 01,Cover Page
+5,ArchitecturalConcrete,00 01 10,Table of Contents
+5,ArchitecturalConcrete,01 13 00,Delegated Design Requirements
+5,ArchitecturalConcrete,01 25 00,Substitution Procedures
+5,ArchitecturalConcrete,01 26 00,Contract Modification Procedures
+5,ArchitecturalConcrete,01 29 00,Payment Procedures
+5,ArchitecturalConcrete,01 31 00,Project Management and Coordination
+5,ArchitecturalConcrete,01 32 00,Construction Progress Documentation
+5,ArchitecturalConcrete,01 33 00,Submittal Procedures
+5,ArchitecturalConcrete,01 40 00,Quality Requirements
+5,ArchitecturalConcrete,01 50 00,Temporary Facilities and Controls
+5,ArchitecturalConcrete,01 60 00,Product Requirements
+5,ArchitecturalConcrete,01 73 00,Execution
+5,ArchitecturalConcrete,01 74 19,Construction Waste Management and Disposal
+5,ArchitecturalConcrete,01 77 00,Closeout Procedures
+5,ArchitecturalConcrete,01 78 23,Operation and Maintenance Data
+5,ArchitecturalConcrete,01 78 39,Project Record Documents
+5,ArchitecturalConcrete,01 79 00,Demonstration and Training
+5,ArchitecturalConcrete,06 10 53,Miscellaneous Rough Carpentry
+5,ArchitecturalConcrete,07 84 13,Penetration Firestopping
+5,ArchitecturalConcrete,07 84 43,Joint Firestopping
+5,ArchitecturalConcrete,07 92 00,Joint Sealants
+5,ArchitecturalConcrete,08 11 13,Hollow Metal Doors and Frames
+5,ArchitecturalConcrete,08 71 00,Door Hardware
+5,ArchitecturalConcrete,08 80 00,Glazing
+5,ArchitecturalConcrete,09 22 16,Non-Structural Metal Framing
+5,ArchitecturalConcrete,09 29 00,Gypsum Board
+5,ArchitecturalConcrete,09 51 13,Acoustical Panel Ceilings
+5,ArchitecturalConcrete,09 91 00,Painting
+6,ColdFormedMetalFraming,00 00 01,Cover Page
+6,ColdFormedMetalFraming,00 01 10,Table of Contents
+6,ColdFormedMetalFraming,01 13 00,Delegated Design Requirements
+6,ColdFormedMetalFraming,01 25 00,Substitution Procedures
+6,ColdFormedMetalFraming,01 26 00,Contract Modification Procedures
+6,ColdFormedMetalFraming,01 29 00,Payment Procedures
+6,ColdFormedMetalFraming,01 31 00,Project Management and Coordination
+6,ColdFormedMetalFraming,01 32 00,Construction Progress Documentation
+6,ColdFormedMetalFraming,01 33 00,Submittal Procedures
+6,ColdFormedMetalFraming,01 40 00,Quality Requirements
+6,ColdFormedMetalFraming,01 50 00,Temporary Facilities and Controls
+6,ColdFormedMetalFraming,01 60 00,Product Requirements
+6,ColdFormedMetalFraming,01 73 00,Execution
+6,ColdFormedMetalFraming,01 74 19,Construction Waste Management and Disposal
+6,ColdFormedMetalFraming,01 77 00,Closeout Procedures
+6,ColdFormedMetalFraming,01 78 23,Operation and Maintenance Data
+6,ColdFormedMetalFraming,01 78 39,Project Record Documents
+6,ColdFormedMetalFraming,01 79 00,Demonstration and Training
+6,ColdFormedMetalFraming,06 10 53,Miscellaneous Rough Carpentry
+6,ColdFormedMetalFraming,07 84 13,Penetration Firestopping
+6,ColdFormedMetalFraming,07 84 43,Joint Firestopping
+6,ColdFormedMetalFraming,07 92 00,Joint Sealants
+6,ColdFormedMetalFraming,08 11 13,Hollow Metal Doors and Frames
+6,ColdFormedMetalFraming,08 71 00,Door Hardware
+6,ColdFormedMetalFraming,08 80 00,Glazing
+6,ColdFormedMetalFraming,09 22 16,Non-Structural Metal Framing
+6,ColdFormedMetalFraming,09 29 00,Gypsum Board
+6,ColdFormedMetalFraming,09 51 13,Acoustical Panel Ceilings
+6,ColdFormedMetalFraming,09 91 00,Painting
+6,ColdFormedMetalFraming,00 00 01,Cover Page
+6,ColdFormedMetalFraming,00 01 10,Table of Contents
+6,ColdFormedMetalFraming,01 13 00,Delegated Design Requirements
+6,ColdFormedMetalFraming,01 25 00,Substitution Procedures
+6,ColdFormedMetalFraming,01 26 00,Contract Modification Procedures
+6,ColdFormedMetalFraming,01 29 00,Payment Procedures
+6,ColdFormedMetalFraming,01 31 00,Project Management and Coordination
+6,ColdFormedMetalFraming,01 32 00,Construction Progress Documentation
+6,ColdFormedMetalFraming,01 33 00,Submittal Procedures
+6,ColdFormedMetalFraming,01 40 00,Quality Requirements
+6,ColdFormedMetalFraming,01 50 00,Temporary Facilities and Controls
+6,ColdFormedMetalFraming,01 60 00,Product Requirements
+6,ColdFormedMetalFraming,01 73 00,Execution
+6,ColdFormedMetalFraming,01 74 19,Construction Waste Management and Disposal
+6,ColdFormedMetalFraming,01 77 00,Closeout Procedures
+6,ColdFormedMetalFraming,01 78 23,Operation and Maintenance Data
+6,ColdFormedMetalFraming,01 78 39,Project Record Documents
+6,ColdFormedMetalFraming,01 79 00,Demonstration and Training
+6,ColdFormedMetalFraming,06 10 53,Miscellaneous Rough Carpentry
+6,ColdFormedMetalFraming,07 84 13,Penetration Firestopping
+6,ColdFormedMetalFraming,07 84 43,Joint Firestopping
+6,ColdFormedMetalFraming,07 92 00,Joint Sealants
+6,ColdFormedMetalFraming,08 11 13,Hollow Metal Doors and Frames
+6,ColdFormedMetalFraming,08 71 00,Door Hardware
+6,ColdFormedMetalFraming,08 80 00,Glazing
+6,ColdFormedMetalFraming,09 22 16,Non-Structural Metal Framing
+6,ColdFormedMetalFraming,09 29 00,Gypsum Board
+6,ColdFormedMetalFraming,09 51 13,Acoustical Panel Ceilings
+6,ColdFormedMetalFraming,09 91 00,Painting
+7,Carpet,00 00 01,Cover Page
+7,Carpet,00 01 10,Table of Contents
+7,Carpet,01 13 00,Delegated Design Requirements
+7,Carpet,01 25 00,Substitution Procedures
+7,Carpet,01 26 00,Contract Modification Procedures
+7,Carpet,01 29 00,Payment Procedures
+7,Carpet,01 31 00,Project Management and Coordination
+7,Carpet,01 32 00,Construction Progress Documentation
+7,Carpet,01 33 00,Submittal Procedures
+7,Carpet,01 40 00,Quality Requirements
+7,Carpet,01 50 00,Temporary Facilities and Controls
+7,Carpet,01 60 00,Product Requirements
+7,Carpet,01 73 00,Execution
+7,Carpet,01 74 19,Construction Waste Management and Disposal
+7,Carpet,01 77 00,Closeout Procedures
+7,Carpet,01 78 23,Operation and Maintenance Data
+7,Carpet,01 78 39,Project Record Documents
+7,Carpet,01 79 00,Demonstration and Training
+7,Carpet,06 10 53,Miscellaneous Rough Carpentry
+7,Carpet,07 84 13,Penetration Firestopping
+7,Carpet,07 84 43,Joint Firestopping
+7,Carpet,07 92 00,Joint Sealants
+7,Carpet,08 11 13,Hollow Metal Doors and Frames
+7,Carpet,08 71 00,Door Hardware
+7,Carpet,08 80 00,Glazing
+7,Carpet,09 22 16,Non-Structural Metal Framing
+7,Carpet,09 29 00,Gypsum Board
+7,Carpet,09 51 13,Acoustical Panel Ceilings
+7,Carpet,09 91 00,Painting
+7,ResilientFlooring,00 00 01,Cover Page
+7,ResilientFlooring,00 01 10,Table of Contents
+7,ResilientFlooring,01 13 00,Delegated Design Requirements
+7,ResilientFlooring,01 25 00,Substitution Procedures
+7,ResilientFlooring,01 26 00,Contract Modification Procedures
+7,ResilientFlooring,01 29 00,Payment Procedures
+7,ResilientFlooring,01 31 00,Project Management and Coordination
+7,ResilientFlooring,01 32 00,Construction Progress Documentation
+7,ResilientFlooring,01 33 00,Submittal Procedures
+7,ResilientFlooring,01 40 00,Quality Requirements
+7,ResilientFlooring,01 50 00,Temporary Facilities and Controls
+7,ResilientFlooring,01 60 00,Product Requirements
+7,ResilientFlooring,01 73 00,Execution
+7,ResilientFlooring,01 74 19,Construction Waste Management and Disposal
+7,ResilientFlooring,01 77 00,Closeout Procedures
+7,ResilientFlooring,01 78 23,Operation and Maintenance Data
+7,ResilientFlooring,01 78 39,Project Record Documents
+7,ResilientFlooring,01 79 00,Demonstration and Training
+7,ResilientFlooring,06 10 53,Miscellaneous Rough Carpentry
+7,ResilientFlooring,07 84 13,Penetration Firestopping
+7,ResilientFlooring,07 84 43,Joint Firestopping
+7,ResilientFlooring,07 92 00,Joint Sealants
+7,ResilientFlooring,08 11 13,Hollow Metal Doors and Frames
+7,ResilientFlooring,08 71 00,Door Hardware
+7,ResilientFlooring,08 80 00,Glazing
+7,ResilientFlooring,09 22 16,Non-Structural Metal Framing
+7,ResilientFlooring,09 29 00,Gypsum Board
+7,ResilientFlooring,09 51 13,Acoustical Panel Ceilings
+7,ResilientFlooring,09 91 00,Painting
+7,Tile,00 00 01,Cover Page
+7,Tile,00 01 10,Table of Contents
+7,Tile,01 13 00,Delegated Design Requirements
+7,Tile,01 25 00,Substitution Procedures
+7,Tile,01 26 00,Contract Modification Procedures
+7,Tile,01 29 00,Payment Procedures
+7,Tile,01 31 00,Project Management and Coordination
+7,Tile,01 32 00,Construction Progress Documentation
+7,Tile,01 33 00,Submittal Procedures
+7,Tile,01 40 00,Quality Requirements
+7,Tile,01 50 00,Temporary Facilities and Controls
+7,Tile,01 60 00,Product Requirements
+7,Tile,01 73 00,Execution
+7,Tile,01 74 19,Construction Waste Management and Disposal
+7,Tile,01 77 00,Closeout Procedures
+7,Tile,01 78 23,Operation and Maintenance Data
+7,Tile,01 78 39,Project Record Documents
+7,Tile,01 79 00,Demonstration and Training
+7,Tile,06 10 53,Miscellaneous Rough Carpentry
+7,Tile,07 84 13,Penetration Firestopping
+7,Tile,07 84 43,Joint Firestopping
+7,Tile,07 92 00,Joint Sealants
+7,Tile,08 11 13,Hollow Metal Doors and Frames
+7,Tile,08 71 00,Door Hardware
+7,Tile,08 80 00,Glazing
+7,Tile,09 22 16,Non-Structural Metal Framing
+7,Tile,09 29 00,Gypsum Board
+7,Tile,09 51 13,Acoustical Panel Ceilings
+7,Tile,09 91 00,Painting
+7,Wood,00 00 01,Cover Page
+7,Wood,00 01 10,Table of Contents
+7,Wood,01 13 00,Delegated Design Requirements
+7,Wood,01 25 00,Substitution Procedures
+7,Wood,01 26 00,Contract Modification Procedures
+7,Wood,01 29 00,Payment Procedures
+7,Wood,01 31 00,Project Management and Coordination
+7,Wood,01 32 00,Construction Progress Documentation
+7,Wood,01 33 00,Submittal Procedures
+7,Wood,01 40 00,Quality Requirements
+7,Wood,01 50 00,Temporary Facilities and Controls
+7,Wood,01 60 00,Product Requirements
+7,Wood,01 73 00,Execution
+7,Wood,01 74 19,Construction Waste Management and Disposal
+7,Wood,01 77 00,Closeout Procedures
+7,Wood,01 78 23,Operation and Maintenance Data
+7,Wood,01 78 39,Project Record Documents
+7,Wood,01 79 00,Demonstration and Training
+7,Wood,06 10 53,Miscellaneous Rough Carpentry
+7,Wood,07 84 13,Penetration Firestopping
+7,Wood,07 84 43,Joint Firestopping
+7,Wood,07 92 00,Joint Sealants
+7,Wood,08 11 13,Hollow Metal Doors and Frames
+7,Wood,08 71 00,Door Hardware
+7,Wood,08 80 00,Glazing
+7,Wood,09 22 16,Non-Structural Metal Framing
+7,Wood,09 29 00,Gypsum Board
+7,Wood,09 51 13,Acoustical Panel Ceilings
+7,Wood,09 91 00,Painting
+8,AcousticalGypsumBoard,00 00 01,Cover Page
+8,AcousticalGypsumBoard,00 01 10,Table of Contents
+8,AcousticalGypsumBoard,01 13 00,Delegated Design Requirements
+8,AcousticalGypsumBoard,01 25 00,Substitution Procedures
+8,AcousticalGypsumBoard,01 26 00,Contract Modification Procedures
+8,AcousticalGypsumBoard,01 29 00,Payment Procedures
+8,AcousticalGypsumBoard,01 31 00,Project Management and Coordination
+8,AcousticalGypsumBoard,01 32 00,Construction Progress Documentation
+8,AcousticalGypsumBoard,01 33 00,Submittal Procedures
+8,AcousticalGypsumBoard,01 40 00,Quality Requirements
+8,AcousticalGypsumBoard,01 50 00,Temporary Facilities and Controls
+8,AcousticalGypsumBoard,01 60 00,Product Requirements
+8,AcousticalGypsumBoard,01 73 00,Execution
+8,AcousticalGypsumBoard,01 74 19,Construction Waste Management and Disposal
+8,AcousticalGypsumBoard,01 77 00,Closeout Procedures
+8,AcousticalGypsumBoard,01 78 23,Operation and Maintenance Data
+8,AcousticalGypsumBoard,01 78 39,Project Record Documents
+8,AcousticalGypsumBoard,01 79 00,Demonstration and Training
+8,AcousticalGypsumBoard,06 10 53,Miscellaneous Rough Carpentry
+8,AcousticalGypsumBoard,07 84 13,Penetration Firestopping
+8,AcousticalGypsumBoard,07 84 43,Joint Firestopping
+8,AcousticalGypsumBoard,07 92 00,Joint Sealants
+8,AcousticalGypsumBoard,08 11 13,Hollow Metal Doors and Frames
+8,AcousticalGypsumBoard,08 71 00,Door Hardware
+8,AcousticalGypsumBoard,08 80 00,Glazing
+8,AcousticalGypsumBoard,09 22 16,Non-Structural Metal Framing
+8,AcousticalGypsumBoard,09 29 00,Gypsum Board
+8,AcousticalGypsumBoard,09 51 13,Acoustical Panel Ceilings
+8,AcousticalGypsumBoard,09 91 00,Painting
+8,AcousticalBaffles,00 00 01,Cover Page
+8,AcousticalBaffles,00 01 10,Table of Contents
+8,AcousticalBaffles,01 13 00,Delegated Design Requirements
+8,AcousticalBaffles,01 25 00,Substitution Procedures
+8,AcousticalBaffles,01 26 00,Contract Modification Procedures
+8,AcousticalBaffles,01 29 00,Payment Procedures
+8,AcousticalBaffles,01 31 00,Project Management and Coordination
+8,AcousticalBaffles,01 32 00,Construction Progress Documentation
+8,AcousticalBaffles,01 33 00,Submittal Procedures
+8,AcousticalBaffles,01 40 00,Quality Requirements
+8,AcousticalBaffles,01 50 00,Temporary Facilities and Controls
+8,AcousticalBaffles,01 60 00,Product Requirements
+8,AcousticalBaffles,01 73 00,Execution
+8,AcousticalBaffles,01 74 19,Construction Waste Management and Disposal
+8,AcousticalBaffles,01 77 00,Closeout Procedures
+8,AcousticalBaffles,01 78 23,Operation and Maintenance Data
+8,AcousticalBaffles,01 78 39,Project Record Documents
+8,AcousticalBaffles,01 79 00,Demonstration and Training
+8,AcousticalBaffles,06 10 53,Miscellaneous Rough Carpentry
+8,AcousticalBaffles,07 84 13,Penetration Firestopping
+8,AcousticalBaffles,07 84 43,Joint Firestopping
+8,AcousticalBaffles,07 92 00,Joint Sealants
+8,AcousticalBaffles,08 11 13,Hollow Metal Doors and Frames
+8,AcousticalBaffles,08 71 00,Door Hardware
+8,AcousticalBaffles,08 80 00,Glazing
+8,AcousticalBaffles,09 22 16,Non-Structural Metal Framing
+8,AcousticalBaffles,09 29 00,Gypsum Board
+8,AcousticalBaffles,09 51 13,Acoustical Panel Ceilings
+8,AcousticalBaffles,09 91 00,Painting
+8,LinearWood,00 00 01,Cover Page
+8,LinearWood,00 01 10,Table of Contents
+8,LinearWood,01 13 00,Delegated Design Requirements
+8,LinearWood,01 25 00,Substitution Procedures
+8,LinearWood,01 26 00,Contract Modification Procedures
+8,LinearWood,01 29 00,Payment Procedures
+8,LinearWood,01 31 00,Project Management and Coordination
+8,LinearWood,01 32 00,Construction Progress Documentation
+8,LinearWood,01 33 00,Submittal Procedures
+8,LinearWood,01 40 00,Quality Requirements
+8,LinearWood,01 50 00,Temporary Facilities and Controls
+8,LinearWood,01 60 00,Product Requirements
+8,LinearWood,01 73 00,Execution
+8,LinearWood,01 74 19,Construction Waste Management and Disposal
+8,LinearWood,01 77 00,Closeout Procedures
+8,LinearWood,01 78 23,Operation and Maintenance Data
+8,LinearWood,01 78 39,Project Record Documents
+8,LinearWood,01 79 00,Demonstration and Training
+8,LinearWood,06 10 53,Miscellaneous Rough Carpentry
+8,LinearWood,07 84 13,Penetration Firestopping
+8,LinearWood,07 84 43,Joint Firestopping
+8,LinearWood,07 92 00,Joint Sealants
+8,LinearWood,08 11 13,Hollow Metal Doors and Frames
+8,LinearWood,08 71 00,Door Hardware
+8,LinearWood,08 80 00,Glazing
+8,LinearWood,09 22 16,Non-Structural Metal Framing
+8,LinearWood,09 29 00,Gypsum Board
+8,LinearWood,09 51 13,Acoustical Panel Ceilings
+8,LinearWood,09 91 00,Painting
+8,Metal,00 00 01,Cover Page
+8,Metal,00 01 10,Table of Contents
+8,Metal,01 13 00,Delegated Design Requirements
+8,Metal,01 25 00,Substitution Procedures
+8,Metal,01 26 00,Contract Modification Procedures
+8,Metal,01 29 00,Payment Procedures
+8,Metal,01 31 00,Project Management and Coordination
+8,Metal,01 32 00,Construction Progress Documentation
+8,Metal,01 33 00,Submittal Procedures
+8,Metal,01 40 00,Quality Requirements
+8,Metal,01 50 00,Temporary Facilities and Controls
+8,Metal,01 60 00,Product Requirements
+8,Metal,01 73 00,Execution
+8,Metal,01 74 19,Construction Waste Management and Disposal
+8,Metal,01 77 00,Closeout Procedures
+8,Metal,01 78 23,Operation and Maintenance Data
+8,Metal,01 78 39,Project Record Documents
+8,Metal,01 79 00,Demonstration and Training
+8,Metal,06 10 53,Miscellaneous Rough Carpentry
+8,Metal,07 84 13,Penetration Firestopping
+8,Metal,07 84 43,Joint Firestopping
+8,Metal,07 92 00,Joint Sealants
+8,Metal,08 11 13,Hollow Metal Doors and Frames
+8,Metal,08 71 00,Door Hardware
+8,Metal,08 80 00,Glazing
+8,Metal,09 22 16,Non-Structural Metal Framing
+8,Metal,09 29 00,Gypsum Board
+8,Metal,09 51 13,Acoustical Panel Ceilings
+8,Metal,09 91 00,Painting

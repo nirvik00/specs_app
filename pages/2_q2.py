@@ -8,6 +8,6 @@ st.write("Type of building is not accounted for at present")
 
 q2 = st.radio(
     "What is the building type?",
-    ["k-12", "hospital"],
-    captions=["school building", "hospital building"]
+    ["general", "k-12", "hospital"],
+    captions=["general", "school building", "hospital building"]
 )

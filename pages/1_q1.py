@@ -9,13 +9,17 @@ st.set_page_config(
 )
 
 st.write("What type of project is this?")
-
+opts =["New Building", "Addition/Renovation", "Renovation"]
 q1 = st.radio(
-    "Is this project a",
-    ["new building", "addition//renovation", "renovation"],
+    "Select:",
+    opts,
     captions=["A new building", "Addition or renovation to an existing building", "Renovation only"]
 )
 
+res = opts[opts.index(q1)].strip().replace(" ", "").replace("/","_")
+st.write(f"You selected {res}")
+
+
 df = pd.read_csv("output.csv")
-df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == "NewBuilding")]
+df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == res)]
 st.table(df2)

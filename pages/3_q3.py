@@ -6,12 +6,12 @@ st.set_page_config(
     page_title="Question 3"
 )
 
-st.write("Demolitiion")
+st.write("Does the project require demolition?")
 
 
 opts=["Yes", "No"]
 q3 = st.radio(
-    "Does the project require demolition?",
+    "Select one",
     opts,
     captions=["The project requires demolition", "Project does NOT require demolition"]
 )
@@ -22,4 +22,6 @@ st.write(f"You selected {res}")
 if res=="Yes":
     df = pd.read_csv("output.csv")
     df2 =df.loc[df['q_num']==3]
+    df2.reset_index(drop=True, inplace=True)
+    df2.index += 1
     st.table(df2)

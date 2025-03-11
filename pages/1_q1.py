@@ -22,4 +22,6 @@ st.write(f"You selected {res}")
 
 df = pd.read_csv("output.csv")
 df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == res)]
+df2.reset_index(drop=True, inplace=True)
+df2.index += 1
 st.table(df2)

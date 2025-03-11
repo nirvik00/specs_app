@@ -232,7 +232,7 @@ def ask_question_6():
 
     # col Y
     q6_desc_2 = """What is the backup for the opaque exterior walls?\nCold Formed Metal Framing"""
-    ans = "Cold Formed Metal Framing"
+    ans = "CMU"
     Q6_2 = get_question_sections_as_dict(SEC_NUMS_EVERY_PROJECT, SEC_NUMS_COLS, 6, q6_desc_2, ans)
     all_question_sections.append(Q6_2)
 

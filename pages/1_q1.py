@@ -11,14 +11,26 @@ st.set_page_config(
 #
 st.write("What type of project is this?")
 
-#
-opts =["New Building", "Addition/Renovation", "Renovation"]
+# set state based on session state
+previous_selected_index=0
+if 'q1_state' in st.session_state:
+    if st.session_state.q1_state == "NewBuilding":
+        previous_selected_index = 0
+    elif st.session_state.q1_state == "Addition_Renovation":
+        previous_selected_index = 1
+    elif st.session_state.q1_state == "Renovation":
+        previous_selected_index = 2
+    else:
+        previous_selected_index = 0
 
 #
+# display radio buttons
+opts =["New Building", "Addition/Renovation", "Renovation"]
 q1 = st.radio(
     "Select:",
     opts,
     captions=["A new building", "Addition or renovation to an existing building", "Renovation only"],
+    index=previous_selected_index
 )
 
 #### get user selection

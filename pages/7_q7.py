@@ -5,19 +5,22 @@ st.set_page_config(
     page_title="Question 7"
 )
 
-st.write("Anticipated floor finishes")
 
+# set state based on session state
+previous_selected_index=[]
+if 'q7_state' in st.session_state:
+    for i, e in enumerate(st.session_state.q7_state.split(", ")):
+        previous_selected_index.append(e)
 
+# display ui, radio buttons on screen
 st.write("What are the anticipated floor finishes? (select all that apply)")
 opts = ["Carpet", "Resilient Flooring", "Tile", "Wood"]
-res2 =[]
-for e in opts:
-    r = e.strip().replace(" ", "")
-    res2.append(r)
-
 q7=[]
-for e in opts:
-    x =st.checkbox(e)
+for i, e in enumerate(opts):
+    if e in previous_selected_index:
+        x =st.checkbox(e, value=True)
+    else:
+        x =st.checkbox(e, value=False)        
     q7.append(x)
 
 #### update session state
@@ -30,6 +33,11 @@ if submit:
     st.session_state['q7_state']= ", ".join(arr)
 
 #### get data for tables
+res2 =[]
+for e in opts:
+    r = e.strip().replace(" ", "")
+    res2.append(r)
+
 result = None
 df = pd.read_csv("output.csv")
 for i, e in enumerate(q7):
@@ -56,5 +64,5 @@ with st.sidebar:
     st.write(f"q4 - Mulitple stories is set to {st.session_state.q4_state}")
     st.write(f"q5 - Exterior opaque Materials is set to {st.session_state.q5_state}")
     st.write(f"q6 - Backup for q5 is set to {st.session_state.q6_state}")
-    st.write(f"q7 - Anticipated floor finishes {st.session_state.q7_state}")
+    st.write(f"q7 - Anticipated floor finishes is set to {st.session_state.q7_state}")
     st.write(f"q8 - Ceiling materials is set to {st.session_state.q8_state}")

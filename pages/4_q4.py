@@ -5,16 +5,29 @@ st.set_page_config(
     page_title="Question 4"
 )
 
-st.write("Are there multiple stories?")
 
+# set state based on session state
+previous_selected_index=0
+if 'q4_state' in st.session_state:
+    if st.session_state.q4_state == "Yes-1":
+        previous_selected_index = 0
+    elif st.session_state.q4_state == "Yes-2":
+        previous_selected_index = 1
+    elif st.session_state.q4_state == "No":
+        previous_selected_index = 2
+    else:
+        previous_selected_index = 0
+
+# display ui, radio buttons on screen
+st.write("Are there multiple stories?")
 opts = ["Yes - 1", "Yes - 2",  "No"]
 captions = ["NewBuilding, Addition, Addition//Renovation", "Renovation", "Does not have multiple stories"]
 q4 = st.radio(
     "Select one",
     opts,
-    captions = captions
+    captions = captions,
+    index = previous_selected_index
 )
-
 
 #### get user selection
 index = opts.index(q4)
@@ -34,15 +47,17 @@ if q4 == "Yes - 1":
     df2['answer'] = "Yes"
     df2.reset_index(drop=True, inplace=True)
     df2.index +=1
+    st.table(df2)#### output table
 elif q4 == "Yes - 2":
     df = pd.read_csv("output.csv")
     df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
     df2['answer'] = "Yes"
     df2.reset_index(drop=True, inplace=True)
     df2.index +=1
+    st.table(df2)#### output table
 
-#### output table
-st.table(df2)
+
+
 
 
 #### update the sidebar

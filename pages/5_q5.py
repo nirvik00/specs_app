@@ -5,22 +5,26 @@ st.set_page_config(
     page_title="Question 5"
 )
 
+# set state based on session state
+previous_selected_index=[]
+if 'q5_state' in st.session_state:
+    for i, e in enumerate(st.session_state.q5_state.split(", ")):
+        previous_selected_index.append(e)
+
+# display ui, radio buttons on screen
 st.write("What are the opaque Exterior materials? (select all that apply)")
-
 opts = ["Masonry", "Stone", "Metal Panel", "Fiber Cement Panel", "Terra Cotta", "Phenolic Panel", "EIFS", "Precast Concrete", "Cast Stone", "Architectural Concrete"]
-res2 =[]
-for e in opts:
-    r = e.strip().replace(" ", "")
-    res2.append(r)
-
-
 q5=[]
-for e in opts:
-    x =st.checkbox(e)
+for i, e in enumerate(opts):
+    if e in previous_selected_index:
+        x =st.checkbox(e, value=True)
+    else:
+        x =st.checkbox(e, value=False)
     q5.append(x)
-
-#### GET session state
 submit = st.button("Submit")
+
+#
+#### GET session state
 arr=[]
 if submit:
     for i, e in enumerate(q5):
@@ -29,6 +33,11 @@ if submit:
     st.session_state['q5_state']= ", ".join(arr)
 
 #### get data for table
+res2 =[] # rectified strings for checking against csv output from MW parser
+for e in opts:
+    r = e.strip().replace(" ", "")
+    res2.append(r)
+
 df = pd.read_csv("output.csv")
 result= None
 s=""
@@ -43,7 +52,7 @@ for i, e in enumerate(q5):
 try:
     result.reset_index(drop=True, inplace=True)
     result.index += 1
-    st.table(result)
+    st.table(result)#### output table
 except:
     pass
 

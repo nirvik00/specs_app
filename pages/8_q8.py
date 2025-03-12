@@ -5,19 +5,24 @@ st.set_page_config(
     page_title="Question 8"
 )
 
+
+
+# set state based on session state
+previous_selected_index=[]
+if 'q8_state' in st.session_state:
+    for i, e in enumerate(st.session_state.q8_state.split(", ")):
+        previous_selected_index.append(e)
+
+# display ui, radio buttons on screen
 st.write("What are the special ceiling materials?")
-
 st.write("Select all that apply")
-
 opts = ["Acoustical Gypsum Board", "Acoustical Gypsum Baffles", "Linear Wood", "Metal"]
-res2 =[]
-for e in opts:
-    r = e.strip().replace(" ", "")
-    res2.append(r)
-
 q8=[]
-for e in opts:
-    x =st.checkbox(e)
+for i, e in enumerate(opts):
+    if e in previous_selected_index:
+        x =st.checkbox(e, value=True)
+    else:
+        x =st.checkbox(e, value=False)       
     q8.append(x)
 
 #### update session state
@@ -29,8 +34,12 @@ if submit:
             arr.append(opts[i])
     st.session_state['q8_state']= ", ".join(arr)
 
-
 #### get list of all selected options
+res2 =[]
+for e in opts:
+    r = e.strip().replace(" ", "")
+    res2.append(r)
+
 result = None
 df = pd.read_csv("output.csv")
 for i, e in enumerate(q8):

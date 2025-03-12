@@ -5,13 +5,24 @@ st.set_page_config(
     page_title="Question 6"
 )
 
-st.write("What is the backup for exterior walls?")
+# set state based on session state
+previous_selected_index=0
+if 'q6_state' in st.session_state:
+    if st.session_state.q6_state == "Cold-Formed Metal Framing":
+        previous_selected_index = 0
+    elif st.session_state.q6_state == "CMU":
+        previous_selected_index = 1
+    else:
+        previous_selected_index = 0
 
+
+# display ui, radio buttons on screen
+st.write("What is the backup for exterior walls?")
 q6 = st.radio(
     "Select one",
     ["Cold-Formed Metal Framing", "CMU"],
+    index = previous_selected_index
 )
-
 st.write(f"You selected: {q6}")
 
 

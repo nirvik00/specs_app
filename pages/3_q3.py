@@ -6,8 +6,6 @@ st.set_page_config(
     page_title="Question 3"
 )
 
-
-
 # set state based on session state
 previous_selected_index=0
 if 'q3_state' in st.session_state:
@@ -45,7 +43,7 @@ if res=="Yes":
     df2 =df.loc[df['q_num']==3]
     df2.reset_index(drop=True, inplace=True)
     df2.index += 1
-    st.table(df2)
+    st.table(df2)#### output table
 
 
 

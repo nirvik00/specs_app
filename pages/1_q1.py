@@ -35,7 +35,7 @@ q1 = st.radio(
 
 #### get user selection
 res = opts[opts.index(q1)].strip().replace(" ", "").replace("/","_")
-st.write(f"Press submit to complete selection: {res}")
+#st.write(f"{msg}: {res}")
 
 
 #### update session state

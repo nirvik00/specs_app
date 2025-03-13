@@ -1,8 +1,26 @@
 import streamlit as st
+import plotly.figure_factory as ff
+import plotly.express as px
+import pandas as pd
+
 
 st.set_page_config(
     page_title="Specs App"
 )
+data = dict(
+    character=["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
+    parent=["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ],
+    value=[10, 10, 10, 10, 10, 10, 10, 10,10])
+
+fig = px.sunburst(
+    data,
+    names='character',
+    parents='parent',
+)
+
+# Plot!
+st.plotly_chart(fig)
+
 
 #
 st.title("Specs Form")

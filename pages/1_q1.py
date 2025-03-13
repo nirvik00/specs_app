@@ -35,7 +35,7 @@ q1 = st.radio(
 
 #### get user selection
 res = opts[opts.index(q1)].strip().replace(" ", "").replace("/","_")
-st.write(f"You selected {res}")
+st.write(f"Press submit to complete selection: {res}")
 
 
 #### update session state
@@ -49,7 +49,8 @@ df = pd.read_csv("output.csv")
 df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == res)]
 df2.reset_index(drop=True, inplace=True)
 df2.index += 1
-st.table(df2)####       output table 
+# st.table(df2)####       output table 
+st.dataframe(df2)#### output table
 
 
 #### update the sidebar

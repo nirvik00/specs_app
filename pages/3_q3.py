@@ -43,8 +43,8 @@ if res=="Yes":
     df2 =df.loc[df['q_num']==3]
     df2.reset_index(drop=True, inplace=True)
     df2.index += 1
-    st.table(df2)#### output table
-
+    # st.table(df2)#### output table
+    st.dataframe(df2)#### output table
 
 
 #### update the sidebar

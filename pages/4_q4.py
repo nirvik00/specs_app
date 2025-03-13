@@ -48,14 +48,15 @@ if q4 == "Yes - 1":
     df2.reset_index(drop=True, inplace=True)
     df2.index +=1
     st.table(df2)#### output table
+    st.dataframe(df2)
 elif q4 == "Yes - 2":
     df = pd.read_csv("output.csv")
     df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
     df2['answer'] = "Yes"
     df2.reset_index(drop=True, inplace=True)
     df2.index +=1
-    st.table(df2)#### output table
-
+    # st.table(df2)#### output table
+    st.dataframe(df2)
 
 
 

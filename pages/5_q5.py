@@ -52,7 +52,8 @@ for i, e in enumerate(q5):
 try:
     result.reset_index(drop=True, inplace=True)
     result.index += 1
-    st.table(result)#### output table
+    # st.table(result)#### output table
+    st.dataframe(result)#### output table
 except:
     pass
 

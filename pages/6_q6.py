@@ -41,7 +41,8 @@ else:
 
 
 #### write the table if no error
-st.table(df2)
+# st.table(df2)
+st.dataframe(df2)
 
 
 #### update the sidebar

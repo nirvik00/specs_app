@@ -2,15 +2,87 @@ import streamlit as st
 import plotly.figure_factory as ff
 import plotly.express as px
 import pandas as pd
+class section:
+    def __init__(self, q_num, ans, sec_num, sec_name):
+        self.q_num = q_num
+        self.ans = ans
+        self.sec_num = sec_num
+        self.sec_name = sec_name
+        self.div_num = '100'
+        self.get_div_num()
 
+    def get_div_num(self):
+        self.div_num = self.sec_num.split(" ")[0]
+
+    def __str__(self):
+        s = f"{self.q_num},"
+        s += f"{self.div_num},"
+        s += f"{self.sec_num}"
+        return s
+
+def get_sec_objs():
+    with open("output.csv", "r") as f:
+        data = f.readlines()
+    sec_li=[]
+    for i, e in enumerate(data):
+        if i==0:
+            continue
+        x = e.split(",")
+        q_num = x[0]
+        ans = x[1]
+        sec_num = x[2]
+        sec_name = x[3]
+        sec = section(q_num, ans, sec_num, sec_name)
+        sec_li.append(sec)
+    return sec_li
+
+def get_div_1(sec_li):
+    li = '01 02 03 04 05 06 07 08 09 10 11 12 13 14 31 32 33 34'.split(' ')
+    all_div_li=[]
+    for div_num in li:
+        div_li=[]
+        for e in sec_li:
+            if e.div_num == div_num:
+                if e.sec_num not in div_li: #### there are many duplicates for each section
+                    div_li.append(e.sec_num)
+        #div_dict={div_num_: div_li}
+        # all_div_li.append(div_dict)
+        all_div_li.append(div_li)
+    return all_div_li
+
+def get_div_2(sec_obj_li):
+    div_li=[""]
+    sec_li=[]
+    for e in sec_obj_li:
+        div = e.sec_num.split(" ")[0]
+        div_li.append(div)
+        sec_li.append(e.sec_num)
+    return div_li, sec_li
+
+def driver():
+    sec_obj_li = get_sec_objs()
+    # ALL_DIV_LI = get_div_1(sec_obj_li)
+    # DIV_LI = '"" 01 02 03 04 05 06 07 08 09 10 11 12 13 14 31 32 33 34'.split(' ')
+    # return DIV_LI, ALL_DIV_LI
+    (div_li, sec_li) = get_div_2(sec_obj_li)
+    x = "Root"*len(div_li) 
+    return div_li, sec_li
 
 st.set_page_config(
     page_title="Specs App"
 )
+
+(DIV_LI, SEC_LI) =driver()
+# print(SEC_LI)
 data = dict(
     character=["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
     parent=["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ],
-    value=[10, 10, 10, 10, 10, 10, 10, 10,10])
+    # character=SEC_LI,
+    # parent=DIV_LI,
+    # character=["1", "2", "3", "3"],
+    # parent=["", "1", "1", "2"],
+    # value=[10, 10, 10, 10, 10, 10, 10, 10,10]
+    )
 
 fig = px.sunburst(
     data,

@@ -5,7 +5,6 @@ st.set_page_config(
     page_title="Question 7"
 )
 
-
 # set state based on session state
 previous_selected_index=[]
 if 'q7_state' in st.session_state:
@@ -55,15 +54,15 @@ except:
     pass
 
 #### update the sidebar
-with st.sidebar:
-    st.header("Specs Result")
-    st.write(f"project name is {st.session_state.proj_name_state}")
-    st.write(f"project number is {st.session_state.proj_num_state}")
-    st.write(f"q1 - Project type is set to {st.session_state.q1_state}")
-    st.write(f"q2 - Typology is set to {st.session_state.q2_state}")
-    st.write(f"q3 - Demolition is set to {st.session_state.q3_state}")
-    st.write(f"q4 - Mulitple stories is set to {st.session_state.q4_state}")
-    st.write(f"q5 - Exterior opaque Materials is set to {st.session_state.q5_state}")
-    st.write(f"q6 - Backup for q5 is set to {st.session_state.q6_state}")
-    st.write(f"q7 - Anticipated floor finishes is set to {st.session_state.q7_state}")
-    st.write(f"q8 - Ceiling materials is set to {st.session_state.q8_state}")
+# with st.sidebar:
+#     st.header("Specs Result")
+#     st.write(f"project name is {st.session_state.proj_name_state}")
+#     st.write(f"project number is {st.session_state.proj_num_state}")
+#     st.write(f"q1 - Project type is set to {st.session_state.q1_state}")
+#     st.write(f"q2 - Typology is set to {st.session_state.q2_state}")
+#     st.write(f"q3 - Demolition is set to {st.session_state.q3_state}")
+#     st.write(f"q4 - Mulitple stories is set to {st.session_state.q4_state}")
+#     st.write(f"q5 - Exterior opaque Materials is set to {st.session_state.q5_state}")
+#     st.write(f"q6 - Backup for q5 is set to {st.session_state.q6_state}")
+#     st.write(f"q7 - Anticipated floor finishes is set to {st.session_state.q7_state}")
+#     st.write(f"q8 - Ceiling materials is set to {st.session_state.q8_state}")

@@ -6,46 +6,31 @@ st.set_page_config(
     page_title="Question 3"
 )
 
-# set state based on session state
-previous_selected_index=0
-if 'q3_state' in st.session_state:
-    if st.session_state.q3_state == "Yes":
-        previous_selected_index = 0
-    elif st.session_state.q3_state == "No":
-        previous_selected_index = 1
-    else:
-        previous_selected_index = 0
+st.write("Does the project require demolition?")
 
 # display ui, radio buttons on screen
-st.write("Does the project require demolition?")
 opts=["Yes", "No"]
 q3 = st.radio(
     "Select one",
     opts,
     captions=["The project requires demolition", "Project does NOT require demolition"],
-    index = previous_selected_index
+    key="q3_state"
 )
 
-
 #### get user selection
-res = opts[opts.index(q3)].strip().replace(" ", "").replace("/","_")
-st.session_state.q3_state = res
-
-##### set the session state
-button = st.button("Submit")
-if button:
-    st.session_state.q3_state = res
+# res = opts[opts.index(q3)].strip().replace(" ", "").replace("/","_")
+# st.session_state.q3_state = res
 
 st.write(f"User selection: {st.session_state['q3_state']}")
 
 #### get data for table
-if res=="Yes":
-    df = pd.read_csv("output.csv")
-    df2 =df.loc[df['q_num']==3]
-    df2.reset_index(drop=True, inplace=True)
-    df2.index += 1
-    # st.table(df2)#### output table
-    st.dataframe(df2)#### output table
+df = pd.read_csv("output.csv")
+df2 =df.loc[df['q_num']==3 & (df['answer'] == st.session_state['q3_state'])]
+df2.reset_index(drop=True, inplace=True)
+df2.index += 1
+
+# st.table(df2)#### output table
+st.dataframe(df2)#### output table
 
 
 

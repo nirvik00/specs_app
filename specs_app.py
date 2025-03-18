@@ -19,7 +19,7 @@ if 'q2_state' not in st.session_state:
 if 'q3_state' not in st.session_state:
     st.session_state['q3_state'] = "Yes"
 if 'q4_state' not in st.session_state:
-    st.session_state['q4_state'] = "Yes-1"
+    st.session_state['q4_state'] = "Yes - 1"
 if 'q5_state' not in st.session_state:
     st.session_state['q5_state'] = "[]"
 if 'q6_state' not in st.session_state:

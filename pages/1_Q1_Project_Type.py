@@ -9,49 +9,20 @@ st.set_page_config(
 #
 st.write("What type of project is this?")
 
-
-# set state based on session state
-previous_selected_index=0
-if 'q1_state' in st.session_state:
-    if st.session_state.q1_state == "NewBuilding":
-        previous_selected_index = 0
-    elif st.session_state.q1_state == "Addition_Renovation":
-        previous_selected_index = 1
-    elif st.session_state.q1_state == "Renovation":
-        previous_selected_index = 2
-    else:
-        previous_selected_index = 0
-
-
-#
 # display radio buttons
-opts =["New Building", "Addition/Renovation", "Renovation"]
+opts =["NewBuilding", "Addition_Renovation", "Renovation"]
 q1 = st.radio(
     "Select:",
     opts,
     captions=["A new building", "Addition or renovation to an existing building", "Renovation only"],
-    index=previous_selected_index
+    key="q1_state"
 )
-
-
-#### get user selection
-res = opts[opts.index(q1)].strip().replace(" ", "").replace("/","_")
-#st.write(f"{msg}: {res}")
-
-
-#### update session state
-submit = st.button("Submit")
-if submit:
-    st.session_state['q1_state']= res
-
-
 
 #### get data for table
 df = pd.read_csv("output.csv")
-df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == res)]
+df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == st.session_state['q1_state'])]
 df2.reset_index(drop=True, inplace=True)
 df2.index += 1
-# st.table(df2)####       output table 
 st.dataframe(df2)#### output table
 
 

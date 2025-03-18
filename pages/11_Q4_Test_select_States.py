@@ -7,31 +7,41 @@ st.set_page_config(
 )
 
 st.write("What type of project is this?")
-
-# set state based on session state
+update_table=False
 # display radio buttons
-opts =["NewBuilding", "Addition_Renovation", "Renovation"]
-
-previous_selected_index=0
-if 'q1_state' in st.session_state:
-    previous_selected_index = opts.index(st.session_state['q1_state'])
-
-q1 = st.radio(
-    "Select:",
+st.write("Are there multiple stories?")
+opts = ["Yes - 1", "Yes - 2",  "No"]
+captions = ["NewBuilding, Addition, Addition//Renovation", "Renovation", "Does not have multiple stories"]
+q4 = st.radio(
+    "Select one",
     opts,
-    captions=["A new building", "Addition or renovation to an existing building", "Renovation only"],
-    key="q1_state"
+    captions = captions,
+    key = 'q4_state',
 )
 
-st.write(f"new state: {st.session_state['q1_state']}")
-st.write(f"option q1: {q1}")
+
+st.write(f"new state: {st.session_state['q4_state']}")
+st.write(f"option q4: {q4}")
 
 #### get data for table
-df = pd.read_csv("output.csv")
-df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == st.session_state['q1_state'])]
-df2.reset_index(drop=True, inplace=True)
-df2.index += 1
-st.dataframe(df2)#### output table
+q4 = st.session_state.q4_state
+if q4 == "Yes - 1":
+    df = pd.read_csv("output.csv")
+    df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
+    df2['answer'] = "Yes"
+    df2.reset_index(drop=True, inplace=True)
+    df2.index +=1
+    # st.table(df2) #### output table
+    st.dataframe(df2)
+
+elif q4 == "Yes - 2":
+    df = pd.read_csv("output.csv")
+    df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
+    df2['answer'] = "Yes"
+    df2.reset_index(drop=True, inplace=True)
+    df2.index +=1
+    # st.table(df2) #### output table
+    st.dataframe(df2)
 
 #### update the sidebar
 with st.sidebar:

@@ -8,18 +8,6 @@ if 'q2_state' not in st.session_state:
     st.session_state['q2_state'] = "not set"
 
 
-# set state based on session state
-previous_selected_index=0
-if 'q2_state' in st.session_state:
-    if st.session_state.q2_state == "General":
-        previous_selected_index = 0
-    elif st.session_state.q2_state == "K-12":
-        previous_selected_index = 1
-    elif st.session_state.q2_state == "HealthCare":
-        previous_selected_index = 2
-    else:
-        previous_selected_index = 0
-
 # note this is not used in calcs
 st.write("Type of building is not accounted for at present")
 
@@ -29,7 +17,7 @@ q2 = st.radio(
     "What is the building type?",
     opts,
     captions=["For all types", "school building", "Health Care"],
-    index = previous_selected_index
+    key="q2_state"
 )
 
 submit = st.button("Submit")

@@ -227,4 +227,4 @@ data = dict( child=child, parents=parents)
 fig = px.sunburst(data, names = 'child', parents = 'parents')
 
 # Plot!
-st.plotly_chart(fig, theme="streamlit")
+st.plotly_chart(fig, theme='streamlit')

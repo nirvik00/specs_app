@@ -5,17 +5,17 @@ import plotly.express as px
 
 
 #### update the sidebar
-# with st.sidebar:
-#     st.write(f"project name is {st.session_state.proj_name_state}")
-#     st.write(f"project number is {st.session_state.proj_num_state}")
-#     st.write(f"q1 - Project type is set to {st.session_state.q1_state}")
-#     st.write(f"q2 - Typology is set to {st.session_state.q2_state}")
-#     st.write(f"q3 - Demolition is set to {st.session_state.q3_state}")
-#     st.write(f"q4 - Mulitple stories is set to {st.session_state.q4_state}")
-#     st.write(f"q5 - Exterior opaque Materials is set to {st.session_state.q5_state}")
-#     st.write(f"q6 - Backup for q5 is set to {st.session_state.q6_state}")
-#     st.write(f"q7 - Anticipated floor finishes {st.session_state.q7_state}")
-#     st.write(f"q8 - Ceiling materials is set to {st.session_state.q8_state}")
+with st.sidebar:
+    st.write(f"project name is {st.session_state.proj_name_state}")
+    st.write(f"project number is {st.session_state.proj_num_state}")
+    st.write(f"q1 - Project type is set to {st.session_state.q1_state}")
+    st.write(f"q2 - Typology is set to {st.session_state.q2_state}")
+    st.write(f"q3 - Demolition is set to {st.session_state.q3_state}")
+    st.write(f"q4 - Mulitple stories is set to {st.session_state.q4_state}")
+    st.write(f"q5 - Exterior opaque Materials is set to {st.session_state.q5_state}")
+    st.write(f"q6 - Backup for q5 is set to {st.session_state.q6_state}")
+    st.write(f"q7 - Anticipated floor finishes {st.session_state.q7_state}")
+    st.write(f"q8 - Ceiling materials is set to {st.session_state.q8_state}")
 
 ####
 
@@ -127,6 +127,9 @@ except:
 
 
 RESULT_ALL = RESULT_ALL.drop_duplicates(subset=["sec_num"], keep="first")
+st.session_state['result_sec_nums'] = RESULT_ALL['sec_num']
+st.session_state['result_sec_names'] = RESULT_ALL['sec_name']
+
 res_df = RESULT_ALL[['sec_num', 'sec_name']]
 res_df = res_df.sort_values(by='sec_num')
 res_df.reset_index(drop=True, inplace=True)
@@ -179,55 +182,3 @@ st.plotly_chart(fig, theme="streamlit")
 
 st.dataframe(res_df)
 
-#########################################################################
-#
-#                       sunburst plot
-#
-#########################################################################
-
-def plot_sunburst():
-    sec_nums = st.session_state['result_sec_nums'] 
-    sec_names = st.session_state['result_sec_names']
-    unique_div_nums = []
-    for e in sec_nums:
-        f = e.split(" ")[0]
-        if f not in unique_div_nums:
-            unique_div_nums.append(f)
-
-    #
-    parents = [" "]
-    child=["root"]
-    count_li=[]
-    values=[1]
-    for e in unique_div_nums:
-        parents.append('root')
-        child.append(e)
-        values.append(1)
-        count=0
-        for sec in sec_nums:
-            if sec.split(" ")[0] == e:
-                count+=1
-        count_li.append(count)
-
-    #
-    for e in sec_nums:
-        f = e.split(" ")[0]
-        if f in unique_div_nums:
-            parents.append(f)
-            child.append(e)
-            x = unique_div_nums.index(f)
-            values.append(count_li[x])
-    #
-    return parents, child, values
-
-(parents, child, values) = plot_sunburst()
-
-# df = pd.DataFrame({'child':child, 'parents':parents, 'values': values})
-# fig = px.sunburst(df, names = 'child', parents = 'parents', values='values')
-
-data = dict( child=child, parents=parents)
-fig = px.sunburst(data, names = 'child', parents = 'parents')
-
-# Plot!
-st.write("\ndivision breakdown")
-st.plotly_chart(fig, theme='streamlit')

@@ -46,6 +46,7 @@ for i, e in enumerate(q5):
         # s += str(i) + ":" + str(e)+ ", "
         df2 = df.loc[(df['q_num']==5) & (df['answer']==res2[i])]
         result = pd.concat([result, df2])
+        result = result.drop_duplicates(subset=["sec_num"], keep="first")
 
 
 #### output table

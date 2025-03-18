@@ -43,6 +43,7 @@ for i, e in enumerate(q7):
     if e == True:
         df2 = df.loc[(df['q_num'] == 7) & (df["answer"] == res2[i])]
         result= pd.concat([result, df2])
+        result = result.drop_duplicates(subset=["sec_num"], keep="first")
 
 #### write the table if no error
 try:

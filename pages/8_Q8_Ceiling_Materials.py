@@ -5,8 +5,6 @@ st.set_page_config(
     page_title="Question 8"
 )
 
-
-
 # set state based on session state
 previous_selected_index=[]
 if 'q8_state' in st.session_state:
@@ -49,7 +47,7 @@ for i, e in enumerate(q8):
         else:
             df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == res2[i])]
         result= pd.concat([result, df2])
-
+        result = result.drop_duplicates(subset=["sec_num"], keep="first")
 
 #### write the table if no error
 try:
@@ -72,3 +70,8 @@ except:
 #     st.write(f"q6 - Backup for q5 is set to {st.session_state.q6_state}")
 #     st.write(f"q7 - Anticipated floor finishes {st.session_state.q7_state}")
 #     st.write(f"q8 - Ceiling materials is set to {st.session_state.q8_state}")
+
+
+
+
+

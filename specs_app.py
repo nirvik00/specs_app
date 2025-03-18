@@ -1,7 +1,6 @@
 import streamlit as st
 
 
-
 st.set_page_config(
     page_title="Home"
 )
@@ -29,6 +28,10 @@ if 'q7_state' not in st.session_state:
     st.session_state['q7_state'] = "[]"
 if 'q8_state' not in st.session_state:
     st.session_state['q8_state'] = "[]"
+if 'result_sec_nums' not in st.session_state:
+    st.session_state['result_sec_nums'] = []
+if 'result_sec_names' not in st.session_state:
+    st.session_state['result_sec_names'] = []    
 
 my_name=st.text_input("enter project name", st.session_state['proj_name_state'])
 my_num=st.text_input("enter project number", st.session_state['proj_num_state'])

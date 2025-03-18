@@ -21,6 +21,7 @@ if 'q1_state' in st.session_state:
     else:
         previous_selected_index = 0
 
+
 #
 # display radio buttons
 opts =["New Building", "Addition/Renovation", "Renovation"]
@@ -30,6 +31,7 @@ q1 = st.radio(
     captions=["A new building", "Addition or renovation to an existing building", "Renovation only"],
     index=previous_selected_index
 )
+
 
 #### get user selection
 res = opts[opts.index(q1)].strip().replace(" ", "").replace("/","_")
@@ -63,6 +65,5 @@ st.dataframe(df2)#### output table
 #     st.write(f"q6 - Backup for q5 is set to {st.session_state.q6_state}")
 #     st.write(f"q7 - Anticipated floor finishes {st.session_state.q7_state}")
 #     st.write(f"q8 - Ceiling materials is set to {st.session_state.q8_state}")
-
 
 

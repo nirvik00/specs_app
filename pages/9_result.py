@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+import plotly.express as px
 
 
 #### update the sidebar
@@ -103,7 +103,7 @@ try:
     RESULT_ALL = pd.concat([RESULT_ALL, df_q7])
 except:
     pass
-
+ 
 
 #### q8 :- get data for table 
 result_q8 = None
@@ -125,4 +125,54 @@ try:
 except:
     pass
 
-st.dataframe(RESULT_ALL)
+
+RESULT_ALL = RESULT_ALL.drop_duplicates(subset=["sec_num"], keep="first")
+res_df = RESULT_ALL[['sec_num', 'sec_name']]
+res_df = res_df.sort_values(by='sec_num')
+res_df.reset_index(drop=True, inplace=True)
+
+st.session_state['result_sec_nums'] = res_df['sec_num'].tolist()
+st.session_state['result_sec_names'] =  res_df['sec_name'].tolist()
+
+
+#########################################################################
+#
+#                       plot barchart
+#
+#########################################################################
+def plot_bar():
+    sec_nums = st.session_state['result_sec_nums'] 
+    sec_names = st.session_state['result_sec_names']
+
+    unique_divs=[]
+    for sec_num in sec_nums:
+        s = sec_num.split(' ')[0]
+        if s not in unique_divs:
+            unique_divs.append(s)
+
+    sec_count_in_div=[]
+    for e in unique_divs:
+        count=0
+        for i, sec in enumerate(sec_nums):
+            div = sec.split(" ")[0]
+            if div== e:
+                count+=1
+        sec_count_in_div.append(count)
+
+
+    df = pd.DataFrame({'div_num': unique_divs, 'num_sec_in_div': sec_count_in_div})
+    return df
+
+df = plot_bar()
+fig = px.bar(df, x="div_num", y="num_sec_in_div", color="num_sec_in_div", title="section/division break-down in each question")
+
+# fig.show()
+st.plotly_chart(fig, theme="streamlit")
+
+#########################################################################
+#
+#                       write table
+#
+#########################################################################
+
+st.dataframe(res_df)

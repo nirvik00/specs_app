@@ -9,6 +9,7 @@ st.set_page_config(
 #
 st.write("What type of project is this?")
 
+
 # set state based on session state
 previous_selected_index=0
 if 'q1_state' in st.session_state:
@@ -42,6 +43,7 @@ res = opts[opts.index(q1)].strip().replace(" ", "").replace("/","_")
 submit = st.button("Submit")
 if submit:
     st.session_state['q1_state']= res
+
 
 
 #### get data for table

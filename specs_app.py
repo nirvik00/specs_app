@@ -13,7 +13,7 @@ if 'proj_name_state' not in st.session_state:
 if 'proj_num_state' not in st.session_state:
     st.session_state['proj_num_state'] = "no num"
 if 'q1_state' not in st.session_state:
-    st.session_state['q1_state'] = "New Building"
+    st.session_state['q1_state'] = "NewBuilding"
 if 'q2_state' not in st.session_state:
     st.session_state['q2_state'] = "General"
 if 'q3_state' not in st.session_state:

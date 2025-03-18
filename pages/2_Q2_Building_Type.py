@@ -36,9 +36,10 @@ submit = st.button("Submit")
 
 #### get user selection
 res = opts[opts.index(q2)].strip().replace(" ", "").replace("/","_")
-st.write(f"You selected {res}")
 if submit:
     st.session_state['q2_state']= res
+
+st.write(f"User selection: {st.session_state['q2_state']}")
 
 
 #### update the sidebar

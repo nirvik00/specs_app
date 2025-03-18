@@ -144,6 +144,8 @@ def plot_bar():
     sec_nums = st.session_state['result_sec_nums'] 
     sec_names = st.session_state['result_sec_names']
 
+    # print(sec_nums)
+
     unique_divs=[]
     for sec_num in sec_nums:
         s = sec_num.split(' ')[0]
@@ -227,4 +229,5 @@ data = dict( child=child, parents=parents)
 fig = px.sunburst(data, names = 'child', parents = 'parents')
 
 # Plot!
+st.write("\ndivision breakdown")
 st.plotly_chart(fig, theme='streamlit')

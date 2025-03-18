@@ -29,13 +29,14 @@ q3 = st.radio(
 
 #### get user selection
 res = opts[opts.index(q3)].strip().replace(" ", "").replace("/","_")
-st.write(f"You selected {res}")
+st.session_state.q3_state = res
 
 ##### set the session state
 button = st.button("Submit")
 if button:
     st.session_state.q3_state = res
 
+st.write(f"User selection: {st.session_state['q3_state']}")
 
 #### get data for table
 if res=="Yes":
@@ -45,6 +46,7 @@ if res=="Yes":
     df2.index += 1
     # st.table(df2)#### output table
     st.dataframe(df2)#### output table
+
 
 
 #### update the sidebar

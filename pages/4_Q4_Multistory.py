@@ -5,7 +5,6 @@ st.set_page_config(
     page_title="Question 4"
 )
 
-
 # set state based on session state
 previous_selected_index=0
 if 'q4_state' in st.session_state:
@@ -38,12 +37,12 @@ if button:
     res = opts[index]
     st.session_state.q4_state = res
 
+st.write(f"User selection: {st.session_state['q4_state']} (Please submit to update)")
 
 #### get data for table
-st.write(f"You selected: {captions[index]}")
 if q4 == "Yes - 1":
     df = pd.read_csv("output.csv")
-    df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition/Renovation")]
+    df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
     df2['answer'] = "Yes"
     df2.reset_index(drop=True, inplace=True)
     df2.index +=1

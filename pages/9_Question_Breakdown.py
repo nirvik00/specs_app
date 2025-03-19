@@ -114,21 +114,16 @@ st.write(f"Answer. {st.session_state.q8_state}")
 result_q8 = None
 q8_res = st.session_state.q8_state
 for i, e in enumerate(q8_res.split(", ")):
-    X = e.replace(" ", "")
-    if i == 1:
-        df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == "AcousticalBaffles")]
-    else:
-        X = e.replace(" ", "").replace("/","_")
-        df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == X)]
+    X = e.strip().replace(" ", "").replace("/","_")
+    df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == X)]
     result_q8= pd.concat([result_q8, df2])
     result_q8 = result_q8.drop_duplicates(subset=["sec_num"], keep="first")
-
 try:
     result_q8.reset_index(drop=True, inplace=True)
     result_q8.index+=1
     st.dataframe(result_q8)####       output table
 except:
-    pass
+    st.write("error retrieving results for Q.8")
 
 
 

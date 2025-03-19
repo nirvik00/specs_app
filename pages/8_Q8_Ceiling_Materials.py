@@ -14,7 +14,7 @@ if 'q8_state' in st.session_state:
 # display ui, radio buttons on screen
 st.write("What are the special ceiling materials?")
 st.write("Select all that apply")
-opts = ["Acoustical Gypsum Board", "Acoustical Gypsum Baffles", "Linear Wood", "Metal"]
+opts = ["Acoustical Gypsum Board", "Acoustical Baffles", "Linear Wood", "Metal"]
 q8=[]
 for i, e in enumerate(opts):
     if e in previous_selected_index:
@@ -42,10 +42,12 @@ result = None
 df = pd.read_csv("output.csv")
 for i, e in enumerate(q8):
     if e == True:
-        if i == 1:
-            df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == "AcousticalBaffles")]
-        else:
-            df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == res2[i])]
+        res = res2[i].strip().replace(" ", "").replace("/","_")
+        df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == res2[i])]
+        # if i == 1:
+        #     df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == "AcousticalBaffles")]
+        # else:
+        #     df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == res2[i])]
         result= pd.concat([result, df2])
         result = result.drop_duplicates(subset=["sec_num"], keep="first")
 

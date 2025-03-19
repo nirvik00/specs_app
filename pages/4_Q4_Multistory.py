@@ -34,8 +34,6 @@ index = opts.index(q4)
 ##### set the session state
 button = st.button("Submit")
 user_selection = captions[opts.index(st.session_state['q4_state'])]
-st.caption(f"User selection: {user_selection}")
-st.write("Please submit to update")
 
 if button:
     res = opts[index]

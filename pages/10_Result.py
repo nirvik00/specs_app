@@ -174,6 +174,8 @@ fig = px.bar(df, x="div_num", y="num_sec_in_div", color="num_sec_in_div", title=
 # fig.show()
 st.plotly_chart(fig, theme="streamlit")
 
+st.write("viz 1, 2, 3 = work in progress...")
+
 #########################################################################
 #
 #                       write table

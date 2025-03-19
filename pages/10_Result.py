@@ -47,7 +47,7 @@ if q3_res == "Yes":
 #### q4 :- get data for table
 q4_res = st.session_state.q4_state
 if q4_res == "Yes - 1":
-    df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition/Renovation")]
+    df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
     df_q4.reset_index(drop=True, inplace=True)
     df_q4.index += 1
     # st.table(df_q3)

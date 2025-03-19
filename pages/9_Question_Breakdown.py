@@ -19,6 +19,7 @@ st.dataframe(df_q1)####       output table
 # q2 does not matter
 
 #### q3 :- get data for table
+st.divider()
 st.write("Question 3. Does the project require demolition?")
 st.write(f"Answer. {st.session_state.q3_state}")
 q3_res = st.session_state.q3_state.strip().replace(" ", "").replace("/","_")
@@ -29,11 +30,12 @@ if q3_res == "Yes":
     st.dataframe(df_q3)####       output table
 
 #### q4 :- get data for table
+st.divider()
 st.write("Question 4. Are there multiple stories?")
 q4_res = st.session_state.q4_state
 if q4_res == "Yes - 1":
     st.write(f"Answer. Yes_NewBuilding_Addition_Addition/Renovation")
-    df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition/Renovation")]
+    df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
     df_q4.reset_index(drop=True, inplace=True)
     df_q4.index += 1
     # st.table(df_q3)
@@ -49,6 +51,7 @@ else:
     st.write(f"Answer. No")
 
 #### q5 :- get data for table
+st.divider()
 st.write("Question 5. What are the opaque Exterior materials?")
 st.write(f"Answer. {st.session_state.q5_state}")
 q5_res = st.session_state.q5_state
@@ -63,19 +66,30 @@ try:
     # st.table(result_q5)#### output table
     st.dataframe(result_q5)#### output table
 except:
-    pass
+    st.write("error getting results for Q5.")
 
 #### q6 :- get data for table 
+st.divider()
+df = pd.read_csv("output.csv")
 st.write("Question 6. What is the backup for exterior walls?")
 st.write(f"Answer. {st.session_state.q6_state}")
 q6_res = st.session_state.q6_state
+df_q6 = None
 if q6_res == "Cold-Formed Metal Framing":
     df_q6= df.loc[(df['q_num'] == 6) & (df['answer'] == "ColdFormedMetalFraming")]
 else:
     df_q6= df.loc[(df['q_num'] == 6) & (df['answer'] == "CMU")]
-st.dataframe(df_q6)
+
+try:
+    # df_q6 = df_q6.reset_index(drop=True, inplace=True)
+    st.dataframe(df_q6)
+except:
+    st.write("error getting results for Q6.")
+
 
 #### q7 :- get data for table 
+st.divider()
+df = pd.read_csv("output.csv")
 st.write("Question 7. What are the anticipated floor finishes?")
 st.write(f"Answer. {st.session_state.q7_state}")
 result_q7 = None
@@ -94,6 +108,7 @@ except:
  
 
 #### q8 :- get data for table 
+st.divider()
 st.write("Question 8.What are the special ceiling materials?")
 st.write(f"Answer. {st.session_state.q8_state}")
 result_q8 = None
@@ -106,10 +121,11 @@ for i, e in enumerate(q8_res.split(", ")):
         X = e.replace(" ", "").replace("/","_")
         df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == X)]
     result_q8= pd.concat([result_q8, df2])
+    result_q8 = result_q8.drop_duplicates(subset=["sec_num"], keep="first")
+
 try:
-    # result_q8.reset_index(drop=True, inplace=True)
-    # result_q8.index+=1
-    # st.table(result_q7)
+    result_q8.reset_index(drop=True, inplace=True)
+    result_q8.index+=1
     st.dataframe(result_q8)####       output table
 except:
     pass

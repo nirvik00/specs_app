@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from os.path import join
 
 st.set_page_config(
     page_title="Question 1"
@@ -42,13 +43,15 @@ res = opts[opts.index(q1)].strip().replace(" ", "").replace("/","_")
 submit = st.button("Submit")
 if submit:
     st.session_state['q1_state']= res
-    #### get data for table
-    df = pd.read_csv("output.csv")
-    df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == res)]
-    df2.reset_index(drop=True, inplace=True)
-    df2.index += 1
-    # st.table(df2)####       output table 
-    st.dataframe(df2)#### output table
+    st.switch_page(join('pages', '2_Q2_Building_Type.py'))
+
+#### get data for table
+df = pd.read_csv("output.csv")
+df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == res)]
+df2.reset_index(drop=True, inplace=True)
+df2.index += 1
+# st.table(df2)####       output table 
+st.dataframe(df2)#### output table
 
 
 #### update the sidebar

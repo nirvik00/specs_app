@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from os.path import join
+
 
 st.set_page_config(
     page_title="Question 7"
@@ -30,6 +32,7 @@ if submit:
         if e == True:
             arr.append(opts[i])
     st.session_state['q7_state']= ", ".join(arr)
+    st.switch_page(join('pages', '8_Q8_Ceiling_Materials.py'))
 
 #### get data for tables
 res2 =[]

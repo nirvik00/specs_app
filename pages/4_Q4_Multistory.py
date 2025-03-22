@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from os.path import join
 
 st.set_page_config(
     page_title="Question 4"
@@ -38,23 +39,25 @@ user_selection = captions[opts.index(st.session_state['q4_state'])]
 if button:
     res = opts[index]
     st.session_state.q4_state = res
-    #### get data for table
-    if q4 == "Yes - 1":
-        df = pd.read_csv("output.csv")
-        df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
-        df2['answer'] = "Yes"
-        df2.reset_index(drop=True, inplace=True)
-        df2.index +=1
-        # st.table(df2) #### output table
-        st.dataframe(df2)
-    elif q4 == "Yes - 2":
-        df = pd.read_csv("output.csv")
-        df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
-        df2['answer'] = "Yes"
-        df2.reset_index(drop=True, inplace=True)
-        df2.index +=1
-        # st.table(df2) #### output table
-        st.dataframe(df2)
+    st.switch_page(join('pages', '5_Q5_Exterior_Materials.py'))
+    
+#### get data for table
+if q4 == "Yes - 1":
+    df = pd.read_csv("output.csv")
+    df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
+    df2['answer'] = "Yes"
+    df2.reset_index(drop=True, inplace=True)
+    df2.index +=1
+    # st.table(df2) #### output table
+    st.dataframe(df2)
+elif q4 == "Yes - 2":
+    df = pd.read_csv("output.csv")
+    df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
+    df2['answer'] = "Yes"
+    df2.reset_index(drop=True, inplace=True)
+    df2.index +=1
+    # st.table(df2) #### output table
+    st.dataframe(df2)
 
 
 

@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from os.path import join
 
 st.set_page_config(
     page_title="Question 6"
@@ -23,14 +24,13 @@ q6 = st.radio(
     ["Cold-Formed Metal Framing", "CMU"],
     index = previous_selected_index
 )
-st.write(f"You selected: {q6}")
 
 
 ##### set the session state
 button = st.button("Submit")
 if button:
     st.session_state.q6_state = q6
-
+    st.switch_page(join('pages', '7_Q7_Floor_Finish.py'))
 
 #### get data for table 
 df = pd.read_csv('output.csv')

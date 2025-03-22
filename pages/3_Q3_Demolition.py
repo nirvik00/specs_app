@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from os.path import join 
 
 st.set_page_config(
     page_title="Question 3"
@@ -29,20 +30,21 @@ q3 = st.radio(
 
 #### get user selection
 res = opts[opts.index(q3)].strip().replace(" ", "").replace("/","_")
-st.write(f"You selected {res}")
 
 ##### set the session state
 button = st.button("Submit")
 if button:
     st.session_state.q3_state = res
-    if res=="Yes":
-        df = pd.read_csv("output.csv")
-        df2 =df.loc[df['q_num']==3]
-        df2.reset_index(drop=True, inplace=True)
-        df2.index += 1
-        # st.table(df2)#### output table
-        st.dataframe(df2)#### output table
-
+    st.switch_page(join('pages', '4_Q4_Multistory.py'))
+    
+if res=="Yes":
+    df = pd.read_csv("output.csv")
+    df2 =df.loc[df['q_num']==3]
+    df2.reset_index(drop=True, inplace=True)
+    df2.index += 1
+    # st.table(df2)#### output table
+    st.dataframe(df2)#### output table
+    
 
 #### update the sidebar
 # with st.sidebar:

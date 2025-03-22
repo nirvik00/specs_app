@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from os.path import join
 
 st.set_page_config(
     page_title="Question 8"
@@ -31,6 +32,7 @@ if submit:
         if e == True:
             arr.append(opts[i])
     st.session_state['q8_state']= ", ".join(arr)
+    st.switch_page(join('pages', '9_Question_Breakdown.py'))
 
 #### get list of all selected options
 res2 =[]

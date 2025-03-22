@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from os.path import join
 
 st.set_page_config(
     page_title="Question 5"
@@ -31,6 +32,7 @@ if submit:
         if e == True:
             arr.append(opts[i])
     st.session_state['q5_state']= ", ".join(arr)
+    st.switch_page(join('pages', '6_Q6_Backup_Exterior_Materials.py'))
 
 #### get data for table
 res2 =[] # rectified strings for checking against csv output from MW parser

@@ -1,4 +1,5 @@
 import streamlit as st
+from os.path import join
 
 st.set_page_config(
     page_title="Question 2"
@@ -36,9 +37,9 @@ submit = st.button("Submit")
 
 #### get user selection
 res = opts[opts.index(q2)].strip().replace(" ", "").replace("/","_")
-st.write(f"You selected {res}")
 if submit:
     st.session_state['q2_state']= res
+    st.switch_page(join('pages', '3_Q3_Demolition.py'))
 
 
 #### update the sidebar

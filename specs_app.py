@@ -1,5 +1,5 @@
 import streamlit as st
-
+from os.path import join
 
 st.set_page_config(
     page_title="Home"
@@ -39,6 +39,7 @@ submit = st.button("Submit")
 if submit:
     st.session_state['proj_name_state']= my_name
     st.session_state['proj_num_state']= my_num
+    st.switch_page(join('pages', '1_Q1_Project_Type.py'))
 
 
 # with st.sidebar:

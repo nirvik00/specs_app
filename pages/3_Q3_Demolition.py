@@ -40,6 +40,7 @@ if button:
 if res=="Yes":
     df = pd.read_csv("output.csv")
     df2 =df.loc[df['q_num']==3]
+    df2 = df2.sort_values(by='sec_num')
     df2.reset_index(drop=True, inplace=True)
     df2.index += 1
     # st.table(df2)#### output table

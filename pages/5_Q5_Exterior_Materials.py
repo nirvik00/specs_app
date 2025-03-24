@@ -53,6 +53,7 @@ for i, e in enumerate(q5):
 
 #### output table
 try:
+    result = result.sort_values(by='sec_num')
     result.reset_index(drop=True, inplace=True)
     result.index += 1
     # st.table(result)#### output table

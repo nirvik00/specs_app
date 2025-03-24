@@ -12,6 +12,7 @@ st.write("Question 1. What type of project is this?")
 st.write(f"Answer. {st.session_state.q1_state}")
 q1_res = st.session_state.q1_state.strip().replace(" ", "").replace("/","_")
 df_q1 = df.loc[(df['q_num'] == 1) & (df['answer'] == q1_res)]
+df_q1 = df_q1.sort_values(by="sec_num")
 df_q1.reset_index(drop=True, inplace=True)
 df_q1.index += 1
 st.dataframe(df_q1)####       output table
@@ -25,6 +26,7 @@ st.write(f"Answer. {st.session_state.q3_state}")
 q3_res = st.session_state.q3_state.strip().replace(" ", "").replace("/","_")
 if q3_res == "Yes":
     df_q3 = df.loc[df['q_num'] == 3]
+    df_q3 = df_q3.sort_values(by="sec_num")
     df_q3.reset_index(drop=True, inplace=True)
     df_q3.index += 1
     st.dataframe(df_q3)####       output table
@@ -43,6 +45,7 @@ if q4_res == "Yes - 1":
 elif q4_res == "Yes - 2":
     st.write(f"Answer. Yes_Renovation")
     df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
+    df_q4 = df_q4.sort_values(by="sec_num")
     df_q4.reset_index(drop=True, inplace=True)
     df_q4.index +=1
     # st.table(df2)#### output table
@@ -60,7 +63,9 @@ for i, e in enumerate(q5_res.split(", ")):
     X = e.replace(" ", "").replace("/","_")
     df_q5 = df.loc[(df['q_num']==5) & (df['answer']==X)]
     result_q5 = pd.concat([result_q5, df_q5])
+    result_q5 = result_q5.drop_duplicates(subset=["sec_num"], keep="first")
 try:
+    result_q5 = result_q5.sort_values(by="sec_num")
     result_q5.reset_index(drop=True, inplace=True)
     result_q5.index += 1
     # st.table(result_q5)#### output table
@@ -82,6 +87,7 @@ else:
 
 try:
     # df_q6 = df_q6.reset_index(drop=True, inplace=True)
+    df_q6 = df_q6.sort_values(by='sec_num')
     st.dataframe(df_q6)
 except:
     st.write("error getting results for Q6.")
@@ -98,7 +104,9 @@ for i, e in enumerate(q7_res.split(", ")):
     X = e.strip().replace(" ", "")
     df_q7 = df.loc[(df['q_num'] == 7) & (df["answer"] == X)]
     result_q7= pd.concat([result_q7, df_q7])
+    result_q7 = result_q7.drop_duplicates(subset=["sec_num"], keep="first")
 try:
+    result_q7 = result_q7.sort_values(by='sec_num')
     result_q7.reset_index(drop=True, inplace=True)
     result_q7.index+=1
     # st.table(result_q7)
@@ -119,6 +127,7 @@ for i, e in enumerate(q8_res.split(", ")):
     result_q8= pd.concat([result_q8, df2])
     result_q8 = result_q8.drop_duplicates(subset=["sec_num"], keep="first")
 try:
+    result_q8 = result_q8.sort_values(by='sec_num')
     result_q8.reset_index(drop=True, inplace=True)
     result_q8.index+=1
     st.dataframe(result_q8)####       output table

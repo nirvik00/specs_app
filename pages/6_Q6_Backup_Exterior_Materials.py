@@ -43,6 +43,7 @@ else:
 #### write the table if no error
 # st.table(df2)
 result=df2
+result = result.sort_values(by='sec_num')
 result.reset_index(drop=True, inplace=True)
 result.index+=1
 st.dataframe(result)

@@ -45,21 +45,40 @@ if q3_res == "Yes":
     RESULT_ALL = pd.concat([RESULT_ALL, df_q3])
 
 #### q4 :- get data for table
-q4_res = st.session_state.q4_state
-if q4_res == "Yes - 1":
+# q4_res = st.session_state.q4_state
+# if q4_res == "Yes - 1":
+#     df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
+#     df_q4.reset_index(drop=True, inplace=True)
+#     df_q4.index += 1
+#     # st.table(df_q3)
+#     # st.dataframe(df_q4)####       output interactive table
+#     RESULT_ALL = pd.concat([RESULT_ALL, df_q4])
+# elif q4_res == "Yes - 2":
+#     df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
+#     df_q4.reset_index(drop=True, inplace=True)
+#     df_q4.index +=1
+#     # st.table(df2)#### output table
+#     # st.dataframe(df_q4)####     output interactive table
+#     RESULT_ALL = pd.concat([RESULT_ALL, df_q4])
+
+if q4_res == "Yes"  and (st.session_state.q1_state=='NewBuilding' or st.session_state.q1_state=='Addition_Renovation'):
+    st.write(f"Answer. Yes_NewBuilding_Addition_Addition/Renovation")
     df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
+    df_q4 = df_q4.sort_values(by='sec_num')
     df_q4.reset_index(drop=True, inplace=True)
     df_q4.index += 1
     # st.table(df_q3)
-    # st.dataframe(df_q4)####       output interactive table
-    RESULT_ALL = pd.concat([RESULT_ALL, df_q4])
-elif q4_res == "Yes - 2":
+    st.dataframe(df_q4)####       output interactive table
+elif q4_res== "Yes" and st.session_state.q1_state=='Renovation':
+    st.write(f"Answer. Yes_Renovation")
     df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
+    df_q4 = df_q4.sort_values(by="sec_num")
     df_q4.reset_index(drop=True, inplace=True)
     df_q4.index +=1
     # st.table(df2)#### output table
-    # st.dataframe(df_q4)####     output interactive table
-    RESULT_ALL = pd.concat([RESULT_ALL, df_q4])
+    st.dataframe(df_q4)####     output interactive table
+else:
+    st.write(f"Answer. No")
 
 #### q5 :- get data for table
 q5_res = st.session_state.q5_state

@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 from os.path import join
 
+OUTPUT_FILE = "output_updated.csv"
+
 st.set_page_config(
     page_title="Question 4"
 )
@@ -40,7 +42,7 @@ for e in opts:
     r = e.strip().replace(" ", "")
     res2.append(r)
 
-df = pd.read_csv("output.csv")
+df = pd.read_csv(OUTPUT_FILE)
 result= None
 s=""
 for i, e in enumerate(q4):

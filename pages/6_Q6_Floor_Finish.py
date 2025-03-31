@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from os.path import join
 
+OUTPUT_FILE = "output_updated.csv"
 
 st.set_page_config(
     page_title="Question 6"
@@ -41,7 +42,7 @@ for e in opts:
     res2.append(r)
 
 result = None
-df = pd.read_csv("output.csv")
+df = pd.read_csv(OUTPUT_FILE)
 for i, e in enumerate(q6):
     if e == True:
         df2 = df.loc[(df['q_num'] == 6) & (df["answer"] == res2[i])]

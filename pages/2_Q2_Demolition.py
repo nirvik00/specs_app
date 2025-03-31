@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 from os.path import join 
 
+OUTPUT_FILE = "output_updated.csv"
+
 st.set_page_config(
     page_title="Question 2"
 )
@@ -38,7 +40,7 @@ if button:
     st.switch_page(join('pages', '3_Q3_Multistory.py'))
     
 if res=="Yes":
-    df = pd.read_csv("output.csv")
+    df = pd.read_csv(OUTPUT_FILE)
     df2 =df.loc[df['q_num']==3]
     df2 = df2.sort_values(by='sec_num')
     df2.reset_index(drop=True, inplace=True)

@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 from os.path import join
 
+OUTPUT_FILE = "output_updated.csv"
+
 st.set_page_config(
-    page_title="Question 8"
+    page_title="Question 7"
 )
 
 # set state based on session state
@@ -15,7 +17,7 @@ if 'q7_state' in st.session_state:
 # display ui, radio buttons on screen
 st.write("What are the special ceiling materials?")
 st.write("Select all that apply")
-opts = ["Acoustical Gypsum Board", "Acoustical Baffles", "Linear Wood", "Metal"]
+opts = ["Acoustical Gypsum Board", "Acoustical Baffles", "Wood", "Metal"]
 q7=[]
 for i, e in enumerate(opts):
     if e in previous_selected_index:
@@ -41,15 +43,11 @@ for e in opts:
     res2.append(r)
 
 result = None
-df = pd.read_csv("output.csv")
+df = pd.read_csv(OUTPUT_FILE)
 for i, e in enumerate(q7):
     if e == True:
         res = res2[i].strip().replace(" ", "").replace("/","_")
-        df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == res2[i])]
-        # if i == 1:
-        #     df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == "AcousticalBaffles")]
-        # else:
-        #     df2 = df.loc[(df['q_num'] == 8) & (df["answer"] == res2[i])]
+        df2 = df.loc[(df['q_num'] == 7) & (df["answer"] == res2[i])]
         result= pd.concat([result, df2])
         result = result.drop_duplicates(subset=["sec_num"], keep="first")
 

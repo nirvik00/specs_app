@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 from os.path import join
 
+OUTPUT_FILE = "output_updated.csv"
+
 st.set_page_config(
     page_title="Question 3"
 )
@@ -32,17 +34,18 @@ index = opts.index(q3)
 
 ##### set the session state
 button = st.button("Submit")
-user_selection = captions[opts.index(st.session_state['q3_state'])]
+# user_selection = captions[opts.index(st.session_state['q3_state'])]
 
 if button:
     res = opts[index]
     st.session_state.q3_state = res
     st.switch_page(join('pages', '4_Q4_Exterior_Materials.py'))
-    
+
+
 #### get data for table
 if q3 == "Yes" and (st.session_state.q1_state=='NewBuilding' or st.session_state.q1_state=='Addition_Renovation'):
-    df = pd.read_csv("output.csv")
-    df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
+    df = pd.read_csv(OUTPUT_FILE)
+    df2 = df.loc[(df["q_num"] == 3) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
     df2['answer'] = "Yes"
     df2 = df2.sort_values(by='sec_num')
     df2.reset_index(drop=True, inplace=True)
@@ -51,7 +54,7 @@ if q3 == "Yes" and (st.session_state.q1_state=='NewBuilding' or st.session_state
     st.dataframe(df2)
 elif q3 == "Yes" and st.session_state.q1_state=='Renovation':
     df = pd.read_csv("output.csv")
-    df2 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
+    df2 = df.loc[(df["q_num"] == 3) & (df["answer"]=="Yes_Renovation")]
     df2['answer'] = "Yes"
     df2 = df2.sort_values(by='sec_num')
     df2.reset_index(drop=True, inplace=True)
@@ -59,7 +62,7 @@ elif q3 == "Yes" and st.session_state.q1_state=='Renovation':
     # st.table(df2) #### output table
     st.dataframe(df2)
 
-
+ 
 ### update the sidebar
 if st.session_state.show_states == True:
     with st.sidebar:

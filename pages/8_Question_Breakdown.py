@@ -7,6 +7,7 @@ import plotly.express as px
 df = pd.read_csv("output.csv")
 RESULT_ALL = None
 
+###############################################################
 #### q1
 st.write("Question 1. What type of project is this?")
 st.write(f"Answer. {st.session_state.q1_state}")
@@ -18,48 +19,49 @@ df_q1.index += 1
 st.dataframe(df_q1)####       output table
 
 # q2 does not matter
-
+###############################################################
 #### q3 :- get data for table
 st.divider()
-st.write("Question 3. Does the project require demolition?")
-st.write(f"Answer. {st.session_state.q3_state}")
-q3_res = st.session_state.q3_state.strip().replace(" ", "").replace("/","_")
-if q3_res == "Yes":
-    df_q3 = df.loc[df['q_num'] == 3]
-    df_q3 = df_q3.sort_values(by="sec_num")
+st.write("Question 2. Does the project require demolition?")
+st.write(f"Answer. {st.session_state.q2_state}")
+q2_res = st.session_state.q2_state.strip().replace(" ", "").replace("/","_")
+if q2_res == "Yes":
+    df_q2 = df.loc[df['q_num'] == 2]
+    df_q2 = df_q2.sort_values(by="sec_num")
+    df_q2.reset_index(drop=True, inplace=True)
+    df_q2.index += 1
+    st.dataframe(df_q2)####       output table
+
+###############################################################
+#### q3 :- get data for table
+st.divider()
+st.write("Question 3. Are there multiple stories?")
+q3_res = st.session_state.q3_state
+if q3_res == "Yes"  and (st.session_state.q1_state=='NewBuilding' or st.session_state.q1_state=='Addition_Renovation'):
+    st.write(f"Answer. Yes_NewBuilding_Addition_Addition/Renovation")
+    df_q3 = df.loc[(df["q_num"] == 3) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
+    df_q3 = df_q3.sort_values(by='sec_num')
     df_q3.reset_index(drop=True, inplace=True)
     df_q3.index += 1
-    st.dataframe(df_q3)####       output table
+    # st.table(df_q3)
+    st.dataframe(df_q3)####       output interactive table
+elif q3_res== "Yes" and st.session_state.q1_state=='Renovation':
+    st.write(f"Answer. Yes_Renovation")
+    df_q3 = df.loc[(df["q_num"] == 3) & (df["answer"]=="Yes_Renovation")]
+    df_q3 = df_q3.sort_values(by="sec_num")
+    df_q3.reset_index(drop=True, inplace=True)
+    df_q3.index +=1
+    # st.table(df2)#### output table
+    st.dataframe(df_q3)####     output interactive table
+else:
+    st.write(f"Answer. No")
 
 ###############################################################
 #### q4 :- get data for table
 st.divider()
-st.write("Question 4. Are there multiple stories?")
-q4_res = st.session_state.q4_state
-if q4_res == "Yes"  and (st.session_state.q1_state=='NewBuilding' or st.session_state.q1_state=='Addition_Renovation'):
-    st.write(f"Answer. Yes_NewBuilding_Addition_Addition/Renovation")
-    df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
-    df_q4 = df_q4.sort_values(by='sec_num')
-    df_q4.reset_index(drop=True, inplace=True)
-    df_q4.index += 1
-    # st.table(df_q3)
-    st.dataframe(df_q4)####       output interactive table
-elif q4_res== "Yes" and st.session_state.q1_state=='Renovation':
-    st.write(f"Answer. Yes_Renovation")
-    df_q4 = df.loc[(df["q_num"] == 4) & (df["answer"]=="Yes_Renovation")]
-    df_q4 = df_q4.sort_values(by="sec_num")
-    df_q4.reset_index(drop=True, inplace=True)
-    df_q4.index +=1
-    # st.table(df2)#### output table
-    st.dataframe(df_q4)####     output interactive table
-else:
-    st.write(f"Answer. No")
-
-#### q5 :- get data for table
-st.divider()
 st.write("Question 5. What are the opaque Exterior materials?")
-st.write(f"Answer. {st.session_state.q5_state}")
-q5_res = st.session_state.q5_state
+st.write(f"Answer. {st.session_state.q4_state}")
+q5_res = st.session_state.q4_state
 result_q5 = None
 for i, e in enumerate(q5_res.split(", ")):
     X = e.replace(" ", "").replace("/","_")
@@ -75,6 +77,7 @@ try:
 except:
     st.write("error getting results for Q5.")
 
+###############################################################
 #### q6 :- get data for table 
 st.divider()
 df = pd.read_csv("output.csv")
@@ -142,11 +145,10 @@ if st.session_state.show_states == True:
         st.write(f"project name is {st.session_state.proj_name_state}")
         st.write(f"project number is {st.session_state.proj_num_state}")
         st.write(f"q1 - Project type is set to {st.session_state.q1_state}")
-        st.write(f"q2 - Typology is set to {st.session_state.q2_state}")
-        st.write(f"q3 - Demolition is set to {st.session_state.q3_state}")
-        st.write(f"q4 - Mulitple stories is set to {st.session_state.q4_state}")
-        st.write(f"q5 - Exterior opaque Materials is set to {st.session_state.q5_state}")
-        st.write(f"q6 - Backup for q5 is set to {st.session_state.q6_state}")
-        st.write(f"q7 - Anticipated floor finishes {st.session_state.q7_state}")
-        st.write(f"q8 - Ceiling materials is set to {st.session_state.q8_state}")
+        st.write(f"q2 - Demolition is set to {st.session_state.q2_state}")
+        st.write(f"q3 - Mulitple stories is set to {st.session_state.q3_state}")
+        st.write(f"q4 - Exterior opaque Materials is set to {st.session_state.q4_state}")
+        st.write(f"q5 - Backup for CMU {st.session_state.q5_state}")
+        st.write(f"q6 - Anticipated floor finishes {st.session_state.q6_state}")
+        st.write(f"q7 - Ceiling materials is set to {st.session_state.q7_state}")
 

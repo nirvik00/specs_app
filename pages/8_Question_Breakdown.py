@@ -122,7 +122,7 @@ except:
 ###############################################################
 #### q7 :- get data for table 
 st.divider()
-st.write("Question 7.What are the special ceiling materials?")
+st.write("Question 7. What are the special ceiling materials?")
 st.write(f"Answer. {st.session_state.q7_state}")
 result_q7 = None
 q7_res = st.session_state.q7_state

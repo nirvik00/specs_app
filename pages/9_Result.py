@@ -127,11 +127,66 @@ try:
 except:
     pass
 
+
+
+
+
 ###############################################################
-#### process data 
+####
+####                            get connected section numbers
 ####
 
-# RESULT_ALL = RESULT_ALL.drop_duplicates(subset=["sec_num"], keep="first")
+def get_sec_name_for_sec_num(a, df_inp):
+    x = df_inp.loc[(df_inp['Section Number'] == a)]
+    y = x[['Section Number', 'Section Name']].values.tolist()[0]
+    return y
+    
+def get_row_from_sec_num(a, df_res, df_inp):
+    sec_num_li = []
+    sec_name_li = []
+    x = df_res.loc[(df_res['Section Number'] == a)]
+    r = x.values.tolist()
+    if not r:
+        return 
+    for e in r[0][2:]:
+        try:
+            (sec_num, sec_name) = get_sec_name_for_sec_num(e, df_inp)
+            sec_num_li.append(sec_num)
+            sec_name_li.append(sec_name)
+        except:
+            pass
+    df = pd.DataFrame({'sec_num': sec_num_li, 'sec_name': sec_name_li})
+    return df
+
+def add_connected_sections(result_all):
+    df_inp = pd.read_csv('mw_spec_toc_updated.csv')
+    df_res = df_inp[['Section Number', 
+             'Section Name', 
+             'Other section that always accompanies this one (1)', 
+             'Other section that always accompanies this one (2)', 
+             'Other section that always accompanies this one (3)']]
+    all_result_df = None
+    sec_num_li = result_all['sec_num'].values.tolist()
+    print(sec_num_li)
+    for sec_num in sec_num_li:
+        df = get_row_from_sec_num(sec_num, df_res, df_inp)
+        all_result_df= pd.concat([all_result_df, df])
+    return all_result_df
+
+all_result_df  = add_connected_sections(RESULT_ALL)
+all_result_df = all_result_df.drop_duplicates(subset=['sec_num'], keep='first')
+
+RESULT_ALL = pd.concat([RESULT_ALL, all_result_df])
+
+###############################################################
+####
+####        process data 
+####
+
+
+RESULT_ALL = RESULT_ALL.drop_duplicates(subset=["sec_num"], keep="first")
+RESULT_ALL.reset_index(drop=True, inplace=True)
+
 st.session_state['result_sec_nums'] = RESULT_ALL['sec_num']
 st.session_state['result_sec_names'] = RESULT_ALL['sec_name']
 
@@ -141,7 +196,6 @@ res_df.reset_index(drop=True, inplace=True)
 
 st.session_state['result_sec_nums'] = res_df['sec_num'].tolist()
 st.session_state['result_sec_names'] =  res_df['sec_name'].tolist()
-
 
 #########################################################################
 #

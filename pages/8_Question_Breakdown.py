@@ -45,7 +45,6 @@ if q3_res == "Yes"  and (st.session_state.q1_state=='NewBuilding' or st.session_
     df_q3 = df_q3.sort_values(by='sec_num')
     df_q3.reset_index(drop=True, inplace=True)
     df_q3.index += 1
-    # st.table(df_q3)
     st.dataframe(df_q3)####       output interactive table
 elif q3_res== "Yes" and st.session_state.q1_state=='Renovation':
     st.write(f"Answer. Yes_Renovation")
@@ -53,7 +52,6 @@ elif q3_res== "Yes" and st.session_state.q1_state=='Renovation':
     df_q3 = df_q3.sort_values(by="sec_num")
     df_q3.reset_index(drop=True, inplace=True)
     df_q3.index +=1
-    # st.table(df2)#### output table
     st.dataframe(df_q3)####     output interactive table
 else:
     st.write(f"Answer. No")

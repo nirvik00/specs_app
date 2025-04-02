@@ -16,7 +16,9 @@ if 'q4_state' in st.session_state:
 
 # display ui, radio buttons on screen
 st.write("What are the opaque Exterior materials? (select all that apply)")
-opts = ["Masonry", "Stone", "Metal Panel", "Fiber Cement Panel", "Terra Cotta", "Phenolic Panel", "EIFS", "Precast Concrete", "Cast Stone", "Architectural Concrete"]
+opts = ["Masonry", "Stone", "Metal Panel", "Fiber Cement Panel", 
+        "Terra Cotta", "Phenolic Panel", "EIFS", "Precast Concrete", 
+        "Cast Stone", "Architectural Concrete"]
 q4=[]
 for i, e in enumerate(opts):
     if e in previous_selected_index:

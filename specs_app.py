@@ -20,7 +20,7 @@ if 'q2_state' not in st.session_state:
     st.session_state['q2_state'] = "Yes"
 # multistory
 if 'q3_state' not in st.session_state:
-    st.session_state['q3_state'] = "Yes_NewBuilding_Addition_Addition/Renovation"
+    st.session_state['q3_state'] = "Yes"
 # opaque exterior materials
 if 'q4_state' not in st.session_state:
     st.session_state['q4_state'] = "[]"

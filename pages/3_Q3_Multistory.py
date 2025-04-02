@@ -30,17 +30,18 @@ q3 = st.radio(
 )
 
 #### get user selection
-index = opts.index(q3)
+# index = opts.index(q3)
 
 ##### set the session state
 button = st.button("Submit")
 # user_selection = captions[opts.index(st.session_state['q3_state'])]
 
 if button:
-    res = opts[index]
-    st.session_state.q3_state = res
+    # res = opts[index]
+    st.session_state.q3_state = q3
     st.switch_page(join('pages', '4_Q4_Exterior_Materials.py'))
 
+st.write(st.session_state.q1_state, st.session_state.q3_state)
 
 #### get data for table
 if q3 == "Yes" and (st.session_state.q1_state=='NewBuilding' or st.session_state.q1_state=='Addition_Renovation'):
@@ -50,16 +51,14 @@ if q3 == "Yes" and (st.session_state.q1_state=='NewBuilding' or st.session_state
     df2 = df2.sort_values(by='sec_num')
     df2.reset_index(drop=True, inplace=True)
     df2.index +=1
-    # st.table(df2) #### output table
     st.dataframe(df2)
 elif q3 == "Yes" and st.session_state.q1_state=='Renovation':
-    df = pd.read_csv("output.csv")
+    df = pd.read_csv(OUTPUT_FILE)
     df2 = df.loc[(df["q_num"] == 3) & (df["answer"]=="Yes_Renovation")]
     df2['answer'] = "Yes"
     df2 = df2.sort_values(by='sec_num')
     df2.reset_index(drop=True, inplace=True)
     df2.index +=1
-    # st.table(df2) #### output table
     st.dataframe(df2)
 
  

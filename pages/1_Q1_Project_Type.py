@@ -30,7 +30,9 @@ opts =["New Building", "Addition/Renovation", "Renovation"]
 q1 = st.radio(
     "Select:",
     opts,
-    captions=["A new building", "Addition or renovation to an existing building", "Renovation only"],
+    captions=["A new building", 
+              "Addition or renovation to an existing building", 
+              "Renovation only"],
     index=previous_selected_index
 )
 

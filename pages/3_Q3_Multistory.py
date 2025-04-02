@@ -41,7 +41,7 @@ if button:
     st.session_state.q3_state = q3
     st.switch_page(join('pages', '4_Q4_Exterior_Materials.py'))
 
-st.write(st.session_state.q1_state, st.session_state.q3_state)
+# st.write(st.session_state.q1_state, st.session_state.q3_state)
 
 #### get data for table
 if q3 == "Yes" and (st.session_state.q1_state=='NewBuilding' or st.session_state.q1_state=='Addition_Renovation'):

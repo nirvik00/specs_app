@@ -1,5 +1,8 @@
 import streamlit as st
 from os.path import join
+import pandas as pd
+
+OUTPUT_FILE = "output_updated_separation.csv"
 
 st.set_page_config(
     page_title="Home"
@@ -48,8 +51,21 @@ if submit:
     st.session_state['proj_name_state']= my_name
     st.session_state['proj_num_state']= my_num
     st.switch_page(join('pages', '1_Q1_Project_Type.py'))
+
+########################################################
+#
+st.write('Sections included in every project are:')
+df = pd.read_csv(OUTPUT_FILE)
+df2 = df.loc[(df['q_num'] == 0) & (df['answer'] == 'Every_Project')]
+df2 = df2.sort_values(by='sec_num')
+df2.reset_index(drop=True, inplace=True)
+# df2.index += 1
+st.dataframe(df2)#### output table
+
+########################################################
 #
 # set state based on session state
+#
 previous_selected_index=0
 if 'show_states' in st.session_state:
     if st.session_state.show_states == True:

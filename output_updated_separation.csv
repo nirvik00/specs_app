@@ -1,0 +1,144 @@
+q_num,answer,sec_num,sec_name
+0,Every_Project,00 00 01,Cover Page
+0,Every_Project,00 01 10,Table of Contents
+0,Every_Project,01 13 00,Delegated Design Requirements
+0,Every_Project,01 25 00,Substitution Procedures
+0,Every_Project,01 26 00,Contract Modification Procedures
+0,Every_Project,01 29 00,Payment Procedures
+0,Every_Project,01 31 00,Project Management and Coordination
+0,Every_Project,01 32 00,Construction Progress Documentation
+0,Every_Project,01 33 00,Submittal Procedures
+0,Every_Project,01 40 00,Quality Requirements
+0,Every_Project,01 50 00,Temporary Facilities and Controls
+0,Every_Project,01 60 00,Product Requirements
+0,Every_Project,01 73 00,Execution
+0,Every_Project,01 74 19,Construction Waste Management and Disposal
+0,Every_Project,01 77 00,Closeout Procedures
+0,Every_Project,01 78 23,Operation and Maintenance Data
+0,Every_Project,01 78 39,Project Record Documents
+0,Every_Project,01 79 00,Demonstration and Training
+0,Every_Project,06 10 53,Miscellaneous Rough Carpentry
+0,Every_Project,07 84 13,Penetration Firestopping
+0,Every_Project,07 84 43,Joint Firestopping
+0,Every_Project,07 92 00,Joint Sealants
+0,Every_Project,08 11 13,Hollow Metal Doors and Frames
+0,Every_Project,08 71 00,Door Hardware
+0,Every_Project,08 80 00,Glazing
+0,Every_Project,09 22 16,Non-Structural Metal Framing
+0,Every_Project,09 29 00,Gypsum Board
+0,Every_Project,09 51 13,Acoustical Panel Ceilings
+0,Every_Project,09 91 00,Painting
+1,NewBuilding,01 31 06,Coordination Drawings
+1,NewBuilding,01 45 33,Code Required Special Inspections and Procedures
+1,NewBuilding,05 50 00,Metal Fabrications
+1,NewBuilding,06 16 00,Sheathing     
+1,NewBuilding,06 40 23,Interior Architectural Woodwork
+1,NewBuilding,06 41 13,Wood-Veneer-Faced Architectural Cabinets
+1,NewBuilding,06 41 16,Plastic-Laminate-Faced Architectural Cabinets
+1,NewBuilding,07 13 26,Self-Adhering Sheet Waterproofing
+1,NewBuilding,07 13 53,Elastomeric Sheet Waterproofing    
+1,NewBuilding,07 13 54,Thermoplastic Sheet Waterproofing    
+1,NewBuilding,07 14 13,Hot Fluid-Applied Rubberized Asphalt Waterproofing
+1,NewBuilding,07 14 16,Cold Fluid-Applied Waterproofing
+1,NewBuilding,07 16 13,Polymer Modified Cement Waterproofing
+1,NewBuilding,07 21 00,Thermal Insulation
+1,NewBuilding,07 27 15,Nonbituminous Self-Adhering Sheet Air Barriers  
+1,NewBuilding,07 27 26,Fluid-Applied Membrane Air Barriers
+1,NewBuilding,07 54 23,Thermoplastic Polyolefin (TPO) Roofing
+1,NewBuilding,07 62 00,Sheet Metal Flashing and Trim
+1,NewBuilding,07 62 10,Flexible Flashings
+1,NewBuilding,07 71 00,Roof Specialties
+1,NewBuilding,07 81 00,Applied Fire Protection
+1,NewBuilding,08 41 13,Aluminum-Framed Entrances and Storefront
+1,NewBuilding,08 41 26,All-Glass Entrances and Storefront
+1,NewBuilding,08 43 13,Aluminum-Framed Storefronts
+1,NewBuilding,08 44 13,Glazed Aluminum Curtainwall
+1,NewBuilding,08 91 19,Fixed Louvers
+1,NewBuilding,09 30 13,Tiling
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 21 13,Metal Toilet Compartments
+1,NewBuilding,10 44 00,Fire Protection Specialties
+1,NewBuilding,12 36 23,Plastic-Laminate-Clad Countertops
+1,NewBuilding,12 36 61,Simulated Stone Countertops
+1,NewBuilding,12 48 13,Entrance Floor Mats and Frames
+1,NewBuilding,12 48 16,Entrance Floor Grilles
+1,NewBuilding,12 93 13,Bicycle Racks
+1,NewBuilding,14 21 23,Electric Traction MRL Elevators
+1,Addition_Renovation,01 31 06,Coordination Drawings
+1,Addition_Renovation,01 45 33,Code Required Special Inspections and Procedures
+1,Addition_Renovation,01 57 20,Temporary Noise and Dust Mitigation
+1,Addition_Renovation,01 73 29,Cutting and Patching
+1,Addition_Renovation,02 41 19,Selective Demolition
+1,Addition_Renovation,05 50 00,Metal Fabrications
+1,Addition_Renovation,06 16 00,Sheathing     
+1,Addition_Renovation,06 40 23,Interior Architectural Woodwork
+1,Addition_Renovation,06 41 13,Wood-Veneer-Faced Architectural Cabinets
+1,Addition_Renovation,06 41 16,Plastic-Laminate-Faced Architectural Cabinets
+1,Addition_Renovation,07 13 26,Self-Adhering Sheet Waterproofing
+1,Addition_Renovation,07 13 53,Elastomeric Sheet Waterproofing    
+1,Addition_Renovation,07 13 54,Thermoplastic Sheet Waterproofing    
+1,Addition_Renovation,07 14 13,Hot Fluid-Applied Rubberized Asphalt Waterproofing
+1,Addition_Renovation,07 14 16,Cold Fluid-Applied Waterproofing
+1,Addition_Renovation,07 16 13,Polymer Modified Cement Waterproofing
+1,Addition_Renovation,07 21 00,Thermal Insulation
+1,Addition_Renovation,07 27 15,Nonbituminous Self-Adhering Sheet Air Barriers  
+1,Addition_Renovation,07 27 26,Fluid-Applied Membrane Air Barriers
+1,Addition_Renovation,07 54 23,Thermoplastic Polyolefin (TPO) Roofing
+1,Addition_Renovation,07 62 00,Sheet Metal Flashing and Trim
+1,Addition_Renovation,07 62 10,Flexible Flashings
+1,Addition_Renovation,08 41 13,Aluminum-Framed Entrances and Storefront
+1,Addition_Renovation,08 41 26,All-Glass Entrances and Storefront
+1,Addition_Renovation,08 43 13,Aluminum-Framed Storefronts
+1,Addition_Renovation,08 44 13,Glazed Aluminum Curtainwall
+1,Addition_Renovation,10 44 00,Fire Protection Specialties
+1,Addition_Renovation,12 36 23,Plastic-Laminate-Clad Countertops
+1,Addition_Renovation,12 36 61,Simulated Stone Countertops
+1,Renovation,01 57 20,Temporary Noise and Dust Mitigation
+1,Renovation,01 73 29,Cutting and Patching
+1,Renovation,02 41 19,Selective Demolition
+2,Yes,01 57 20,Temporary Noise and Dust Mitigation
+2,Yes,01 73 29,Cutting and Patching
+2,Yes,02 41 16,Structure Demolition
+2,Yes,02 41 19,Selective Demolition
+3,Yes_NewBuilding_Addition_Addition_Renovation,05 51 13,Metal Pan Stairs
+3,Yes_NewBuilding_Addition_Addition_Renovation,09 21 16,Gypsum Board Shaft Wall Assemblies
+3,Yes_NewBuilding_Addition_Addition_Renovation,14 21 23,Electric Traction MRL Elevators
+3,Yes_Renovation,09 21 16,Gypsum Board Shaft Wall Assemblies
+4,Masonry,04 20 00,Unit Masonry
+4,Stone,04 42 00,Exterior Stone Cladding   
+4,MetalPanel,07 42 13,Formed Metal Wall Panels   
+4,MetalPanel,07 42 13,Formed Metal Wall Panels   
+4,FiberCementPanel,07 42 53,Fiber-Reinforced Cementitious Panel Cladding
+4,TerraCotta,07 42 29,Terracotta Wall Panels 
+4,PhenolicPanel,07 42 43,Solid Phenolic Cladding Wall Panels
+4,EIFS,07 24 19,Water-Drainage Exterior Insulation and Finish System (EIFS)
+4,PrecastConcrete,03 45 00,Precast Architectural Concrete
+4,PrecastConcrete,03 45 33,Precast Architectural Pretensioned Concrete Cladding
+4,ArchitecturalConcrete,03 33 00,Architectural Cast-In-Place Concrete
+5,CMU,04 20 00,Unit Masonry
+6,Carpet,09 65 13,Resilient Base and Accessories
+6,Carpet,09 68 13,Tile Carpeting
+6,Carpet,09 68 16,Sheet Carpeting
+6,ResilientFlooring,09 65 13,Resilient Base and Accessories
+6,ResilientFlooring,09 65 16,Resilient Sheet Vinyl Flooring
+6,ResilientFlooring,09 65 18,Resilient Sheet Rubber Flooring
+6,ResilientFlooring,09 65 19,Resilient Tile Flooring
+6,ResilientFlooring,09 65 19,Resilient Tile Flooring
+6,ResilientFlooring,09 65 43,Linoleum Flooring
+6,Tile,09 30 13,Tiling
+6,Wood,09 64 00,Wood Flooring
+6,Wood,09 64 36,Bamboo Flooring
+6,Wood,09 64 66,Wood Athletic Flooring
+6,Terrazzo,09 66 23,Resinous Matrix Terrazzo
+7,AcousticalGypsumBoard,09 56 13,Acoustical Perforated Gypsum Board Ceilings
+7,AcousticalBaffles,09 54 47,Blade Acoustical Panels
+7,Wood,09 54 26,Wood Veneer Panel Ceilings
+7,Metal,09 51 33,Acoustical Metal Pan Ceilings
+7,Metal,09 54 13,Open Cell Metal Ceilings
+7,Metal,09 54 13,Open Cell Metal Ceilings
+7,Metal,09 54 23,Linear Plank Metal Ceilings

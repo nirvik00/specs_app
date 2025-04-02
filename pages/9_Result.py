@@ -4,42 +4,43 @@ import numpy as np
 import plotly.express as px
 
 
-#### update the sidebar
-# with st.sidebar:
-#     st.write(f"project name is {st.session_state.proj_name_state}")
-#     st.write(f"project number is {st.session_state.proj_num_state}")
-#     st.write(f"q1 - Project type is set to {st.session_state.q1_state}")
-#     st.write(f"q2 - Demolition is set to {st.session_state.q3_state}")
-#     st.write(f"q3 - Mulitple stories is set to {st.session_state.q4_state}")
-#     st.write(f"q4 - Exterior opaque Materials is set to {st.session_state.q5_state}")
-#     st.write(f"q5 - Backup for q5 is set to {st.session_state.q6_state}")
-#     st.write(f"q6 - Anticipated floor finishes {st.session_state.q7_state}")
-#     st.write(f"q7 - Ceiling materials is set to {st.session_state.q8_state}")
-
 ####
-OUTPUT_FILE = "output_updated.csv"
+# OUTPUT_FILE = "output_updated.csv"
+OUTPUT_FILE = "output_updated_separation.csv"
 
 #### get data for table
 df = pd.read_csv(OUTPUT_FILE)
 RESULT_ALL = None
 
+
+###############################################################
+#### every project
+####
+df = pd.read_csv(OUTPUT_FILE)
+df_q0 = df.loc[(df['q_num'] == 0) & (df['answer'] == 'Every_Project')]
+# df_q0 = df_q0.sort_values(by='sec_num')
+# df_q0.reset_index(drop=True, inplace=True)
+# df_q0.index += 1
+RESULT_ALL = pd.concat([RESULT_ALL, df_q0])
+
+###############################################################
 #### q1
+####
+df = pd.read_csv(OUTPUT_FILE)
 q1_res = st.session_state.q1_state.strip().replace(" ", "").replace("/","_")
 df_q1 = df.loc[(df['q_num'] == 1) & (df['answer'] == q1_res)]
-df_q1.reset_index(drop=True, inplace=True)
-df_q1.index += 1
-# st.table(df_q1)
-# st.dataframe(df_q1)####       output table
+# df_q1.reset_index(drop=True, inplace=True)
+# df_q1.index += 1
 RESULT_ALL = pd.concat([RESULT_ALL, df_q1])
 
+###############################################################
 # q2 does not matter
-
 #### q2 :- get data for table
 q2_res = st.session_state.q2_state.strip().replace(" ", "").replace("/","_")
 if q2_res == "Yes":
     df_q2 = df.loc[df['q_num'] == 2]
-    df_q2.reset_index(drop=True, inplace=True)
-    df_q2.index += 1
+    # df_q2.reset_index(drop=True, inplace=True)
+    # df_q2.index += 1
     RESULT_ALL = pd.concat([RESULT_ALL, df_q2])
 
 ###############################################################
@@ -49,15 +50,15 @@ q3_res = st.session_state.q3_state
 df = pd.read_csv(OUTPUT_FILE)
 if q3_res == "Yes"  and (st.session_state.q1_state=='NewBuilding' or st.session_state.q1_state=='Addition_Renovation'):
     df_q3 = df.loc[(df["q_num"] == 3) & (df["answer"]=="Yes_NewBuilding_Addition_Addition_Renovation")]
-    df_q3 = df_q3.sort_values(by='sec_num')
-    df_q3.reset_index(drop=True, inplace=True)
-    df_q3.index += 1
+    # df_q3 = df_q3.sort_values(by='sec_num')
+    # df_q3.reset_index(drop=True, inplace=True)
+    # df_q3.index += 1
     RESULT_ALL = pd.concat([RESULT_ALL, df_q3])
 elif q3_res== "Yes" and st.session_state.q1_state=='Renovation':
     df_q3 = df.loc[(df["q_num"] == 3) & (df["answer"]=="Yes_Renovation")]
-    df_q3 = df_q3.sort_values(by="sec_num")
-    df_q3.reset_index(drop=True, inplace=True)
-    df_q3.index +=1
+    # df_q3 = df_q3.sort_values(by="sec_num")
+    # df_q3.reset_index(drop=True, inplace=True)
+    # df_q3.index +=1
     RESULT_ALL = pd.concat([RESULT_ALL, df_q3])
 else:
     pass
@@ -73,9 +74,9 @@ for i, e in enumerate(q4_res.split(", ")):
     df_q4 = df.loc[(df['q_num']==4) & (df['answer']==X)]
     RESULT_ALL = pd.concat([RESULT_ALL, df_q4])
 try:
-    result_q4 = result_q4.sort_values(by="sec_num")
-    result_q4.reset_index(drop=True, inplace=True)
-    result_q4.index += 1
+    # result_q4 = result_q4.sort_values(by="sec_num")
+    # result_q4.reset_index(drop=True, inplace=True)
+    # result_q4.index += 1
     RESULT_ALL = pd.concat([RESULT_ALL, df_q4])
 except:
     pass
@@ -130,7 +131,7 @@ except:
 #### process data 
 ####
 
-RESULT_ALL = RESULT_ALL.drop_duplicates(subset=["sec_num"], keep="first")
+# RESULT_ALL = RESULT_ALL.drop_duplicates(subset=["sec_num"], keep="first")
 st.session_state['result_sec_nums'] = RESULT_ALL['sec_num']
 st.session_state['result_sec_names'] = RESULT_ALL['sec_name']
 

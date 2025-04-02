@@ -2,7 +2,9 @@ import streamlit as st
 import pandas as pd
 from os.path import join
 
-OUTPUT_FILE = "output_updated.csv"
+# OUTPUT_FILE = "output_updated.csv"
+OUTPUT_FILE = "output_updated_separation.csv"
+
 
 st.set_page_config(
     page_title="Question 3"
@@ -50,7 +52,7 @@ if q3 == "Yes" and (st.session_state.q1_state=='NewBuilding' or st.session_state
     df2['answer'] = "Yes"
     df2 = df2.sort_values(by='sec_num')
     df2.reset_index(drop=True, inplace=True)
-    df2.index +=1
+    # df2.index +=1
     st.dataframe(df2)
 elif q3 == "Yes" and st.session_state.q1_state=='Renovation':
     df = pd.read_csv(OUTPUT_FILE)
@@ -58,7 +60,7 @@ elif q3 == "Yes" and st.session_state.q1_state=='Renovation':
     df2['answer'] = "Yes"
     df2 = df2.sort_values(by='sec_num')
     df2.reset_index(drop=True, inplace=True)
-    df2.index +=1
+    # df2.index +=1
     st.dataframe(df2)
 
  

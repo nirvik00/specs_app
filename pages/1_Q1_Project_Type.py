@@ -3,7 +3,9 @@ import pandas as pd
 import numpy as np
 from os.path import join
 
-OUTPUT_FILE = "output_updated.csv"
+INPUT_FILE=""
+# OUTPUT_FILE = "output_updated.csv"
+OUTPUT_FILE = "output_updated_separation.csv"
 
 st.set_page_config(
     page_title="Question 1"
@@ -50,7 +52,7 @@ df = pd.read_csv(OUTPUT_FILE)
 df2 = df.loc[(df['q_num'] == 1) & (df['answer'] == res)]
 df2 = df2.sort_values(by='sec_num')
 df2.reset_index(drop=True, inplace=True)
-df2.index += 1
+# df2.index += 1
 st.dataframe(df2)#### output table
 
 ### update the sidebar

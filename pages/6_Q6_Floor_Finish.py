@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 from os.path import join
 
-OUTPUT_FILE = "output_updated.csv"
+# OUTPUT_FILE = "output_updated.csv"
+OUTPUT_FILE = "output_updated_separation.csv"
 
 st.set_page_config(
     page_title="Question 6"
@@ -53,7 +54,7 @@ for i, e in enumerate(q6):
 try:
     result = result.sort_values(by='sec_num')
     result.reset_index(drop=True, inplace=True)
-    result.index+=1
+    # result.index+=1
     st.dataframe(result)####       output table
 except:
     pass

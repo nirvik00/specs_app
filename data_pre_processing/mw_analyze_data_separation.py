@@ -87,12 +87,12 @@ def get_question_sections_obj_csv(secs_in_every_project, sec_nums, q_num, q_desc
             sec_count +=1 
         count += 1
     # get names for all sections
-    x = check_all_sec_nums(secs_in_every_project, sec_num_li) # array of sections in all projects
-    for e in x:
-        (t, name) = get_sec_name_from_num(e)
-        if t == True:
-            sec_name_li.append(name)
-            sec_num_li.append(e)
+    # x = check_all_sec_nums(secs_in_every_project, sec_num_li) # array of sections in all projects
+    # for e in x:
+    #     (t, name) = get_sec_name_from_num(e)
+    #     if t == True:
+    #         sec_name_li.append(name)
+    #         sec_num_li.append(e)
     q = QuestionSection(q_num, q_desc, ans, sec_num_li, sec_name_li)
     # return q.get_dict()
     return q.get_csv()
@@ -120,15 +120,6 @@ def ask_question_1():
     all_question_sections.append(Q1_3)
     return all_question_sections
 
-
-# col J deprecated
-# def deprecated_ask_question_2():
-#     all_question_sections = []
-#     q2_desc = """What is the building type?"""
-#     ans2 = "Renovation"
-#     Q2 = get_question_sections_obj_csv(SEC_NUMS_EVERY_PROJECT, SEC_NUMS_COLS, 2, q2_desc, ans2)
-#     all_question_sections.append(Q2)
-#     return all_question_sections
 
 
 # col K
@@ -304,10 +295,21 @@ def ask_question_7():
     return all_question_sections
 
 
+def get_every_sections_for_every_project():
+    all_question_sections=[]
+    # col AC
+    q = """Every Project"""
+    ans = "Every_Project"
+    Q_ = get_question_sections_obj_csv(SEC_NUMS_EVERY_PROJECT, SEC_NUMS_COLS, 0, q, ans)
+    all_question_sections.append(Q_)
+
+    return all_question_sections
+
+
 def question_driver():
     all_question_sections = {}
+    all_question_sections["q0"] = get_every_sections_for_every_project()
     all_question_sections["q1"] = ask_question_1()
-    # all_question_sections["q2"] = ask_question_2()
     all_question_sections["q2"] = ask_question_2()
     all_question_sections["q3"] = ask_question_3()
     all_question_sections["q4"] = ask_question_4()
@@ -319,8 +321,8 @@ def question_driver():
 
 def question_driver_csv():
     arr=[]
+    arr += get_every_sections_for_every_project()
     arr += ask_question_1()
-    # arr += ask_question_2()
     arr += ask_question_2()
     arr += ask_question_3()
     arr += ask_question_4()
@@ -361,7 +363,8 @@ def write_csv_to_file(arr):
 ####################################################
 
 INPUT_FILENAME = "mw_spec_toc_updated.csv"
-OUTPUT_FILENAME = "output_updated.csv"
+# OUTPUT_FILENAME = "output_updated.csv"
+OUTPUT_FILENAME = "output_updated_separation.csv"
 (SEC_NUMS_COLS, SEC_NAMES_COLS, ALL_SEC_LI, SEC_NUMS_EVERY_PROJECT, CONN1_COLS, CONN2_COLS, CONN3_COLS) = init()
 question_driver_csv()
 

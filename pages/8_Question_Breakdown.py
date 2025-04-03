@@ -199,7 +199,6 @@ def add_connected_sections(result_all):
              'Other section that always accompanies this one (3)']]
     all_result_df = None
     sec_num_li = result_all['sec_num'].values.tolist()
-    print(sec_num_li)
     for sec_num in sec_num_li:
         df = get_row_from_sec_num(sec_num, df_res, df_inp)
         all_result_df= pd.concat([all_result_df, df])

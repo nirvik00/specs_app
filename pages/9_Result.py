@@ -224,11 +224,14 @@ def plot_bar():
         sec_count_in_div.append(count)
 
 
-    df = pd.DataFrame({'div_num': unique_divs, 'num_sec_in_div': sec_count_in_div})
+    df = pd.DataFrame({'div_num': unique_divs, 
+                       'num_sec_in_div': sec_count_in_div})
     return df
 
 df = plot_bar()
-fig = px.bar(df, x="div_num", y="num_sec_in_div", color="num_sec_in_div", title="section/division break-down in each question")
+fig = px.bar(df, x="div_num", y="num_sec_in_div", 
+             color="num_sec_in_div", 
+             title="section/division break-down in each question")
 
 # fig.show()
 st.plotly_chart(fig, theme="streamlit")

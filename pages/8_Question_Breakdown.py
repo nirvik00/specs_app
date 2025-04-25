@@ -2,9 +2,16 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+from os.path import join
 
 # OUTPUT_FILE = "output_updated.csv"
 OUTPUT_FILE = "output_updated_separation.csv"
+
+
+st.set_page_config(
+    page_title="Results",
+    initial_sidebar_state="expanded"
+)
 
 RESULT_ALL = None
 
@@ -211,6 +218,12 @@ all_result_df  = add_connected_sections(RESULT_ALL)
 all_result_df = all_result_df.drop_duplicates(subset=['sec_num'], keep='first')
 all_result_df.reset_index(drop=True, inplace=True)
 st.dataframe(all_result_df)
+
+st.divider()
+st.write("Goto results page")
+submit = st.button("Submit")
+if submit:
+    st.switch_page(join('pages', '9_Result.py'))
 
 
 ###############################################################

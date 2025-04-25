@@ -8,7 +8,8 @@ INPUT_FILE=""
 OUTPUT_FILE = "output_updated_separation.csv"
 
 st.set_page_config(
-    page_title="Question 1"
+    page_title="Question 1",
+    initial_sidebar_state="expanded"
 )
 
 #

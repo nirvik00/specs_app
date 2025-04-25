@@ -5,7 +5,8 @@ import pandas as pd
 OUTPUT_FILE = "output_updated_separation.csv"
 
 st.set_page_config(
-    page_title="Home"
+    page_title="Home",
+    initial_sidebar_state="expanded"
 )
 
 #

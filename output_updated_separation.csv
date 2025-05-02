@@ -120,6 +120,7 @@ q_num,answer,sec_num,sec_name
 4,PrecastConcrete,03 45 00,Precast Architectural Concrete
 4,PrecastConcrete,03 45 33,Precast Architectural Pretensioned Concrete Cladding
 4,ArchitecturalConcrete,03 33 00,Architectural Cast-In-Place Concrete
+4,CastStone,04 72 00,Cast Stone Masonry
 5,CMU,04 20 00,Unit Masonry
 6,Carpet,09 65 13,Resilient Base and Accessories
 6,Carpet,09 68 13,Tile Carpeting
